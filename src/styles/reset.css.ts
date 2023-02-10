@@ -29,6 +29,7 @@ globalStyle("html", {
   tabSize: 4 /* 3 */,
   // fontFamily: font.notoSerifJP /* 4 */,
   position: "relative",
+  fontSize: "16px",
   scrollBehavior: "smooth",
 });
 
