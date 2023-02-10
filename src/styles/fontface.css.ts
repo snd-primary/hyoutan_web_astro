@@ -1,4 +1,4 @@
-import { globalFontFace, style } from "@vanilla-extract/css";
+import { globalFontFace } from "@vanilla-extract/css";
 
 const LINESeedJP = "LINESeedJP";
 const Yuji_Syuku_subset = "Yuji_Syuku_subset";
