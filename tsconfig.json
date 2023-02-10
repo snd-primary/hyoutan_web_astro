@@ -1,3 +1,23 @@
 {
-  "extends": "astro/tsconfigs/strictest"
+  "extends": "astro/tsconfigs/strictest",
+  "compilerOptions": {
+    "target": "es2020",
+    "module": "ESNext",
+    "jsx": "react-jsx",
+    "jsxImportSource": "react",
+    "lib": ["es2020", "dom"],
+    "sourceMap": false,
+    "strict": true,
+    "moduleResolution": "node",
+    "allowJs": true,
+    "outDir": "./dist",
+    "rootDir": "./",
+    "baseUrl": "./",
+    "forceConsistentCasingInFileNames": true,
+    "types": ["vite-plugin-svgr/client"],
+    "importsNotUsedAsValues": "error"
+  },
+  "include": ["src/**/*", "types", "gtag.js"],
+  "exclude": ["dist", "node_modules"],
+  "compileOnSave": false
 }
