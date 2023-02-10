@@ -1,4 +1,4 @@
-import { defineConfig } from 'astro/config';
+import { defineConfig } from "astro/config";
 
 // https://astro.build/config
 import react from "@astrojs/react";
@@ -13,6 +13,9 @@ import image from "@astrojs/image";
 import partytown from "@astrojs/partytown";
 
 // https://astro.build/config
+import vanillaExtract from "astro-vanilla-extract";
+
+// https://astro.build/config
 export default defineConfig({
-  integrations: [react(), sitemap(), image(), partytown()]
+  integrations: [react(), sitemap(), image(), partytown(), vanillaExtract()],
 });

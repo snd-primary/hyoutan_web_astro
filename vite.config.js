@@ -1,8 +1,8 @@
-import { macaronVitePlugin } from "@macaron-css/vite";
 import svgr from "vite-plugin-svgr";
+import { vanillaExtractPlugin } from "@vanilla-extract/vite-plugin";
 
 export default {
-  plugins: [macaronVitePlugin(), svgr()],
+  plugins: [vanillaExtractPlugin(), svgr()],
   ssr: {
     noExternal: ["usehooks-ts"],
   },
