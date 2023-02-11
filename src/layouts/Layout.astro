@@ -6,6 +6,7 @@ export interface Props {
 const { title } = Astro.props;
 import "../styles/reset.css";
 import "../styles/fontface.css";
+import { styles } from "@styles/layout/Layout.css";
 ---
 
 <!DOCTYPE html>
@@ -17,7 +18,7 @@ import "../styles/fontface.css";
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
   </head>
-  <body>
+  <body class={styles.container}>
     <slot />
   </body>
 </html>
