@@ -7,6 +7,7 @@ const { title } = Astro.props;
 import "../styles/reset.css";
 import "../styles/fontface.css";
 import { styles } from "@styles/layout/Layout.css";
+import { ShopLogo, GlobalMenu } from "@components";
 ---
 
 <!DOCTYPE html>
@@ -19,6 +20,11 @@ import { styles } from "@styles/layout/Layout.css";
     <title>{title}</title>
   </head>
   <body class={styles.container}>
+    <header>
+      <ShopLogo />
+      <GlobalMenu />
+    </header>
     <slot />
+    <footer></footer>
   </body>
 </html>

@@ -16,13 +16,14 @@
     "paths": {
       "@": ["src"],
       "@components": ["src/components/index"],
-      "@styles/*": ["src/styles/*"]
+      "@styles/*": ["src/styles/*"],
+      "@sitedata": ["src/sitedata/index"]
     },
     "forceConsistentCasingInFileNames": true,
     "types": ["vite-plugin-svgr/client"],
     "importsNotUsedAsValues": "error"
   },
   "include": ["src/**/*", "types", "gtag.js"],
-  "exclude": ["dist", "node_modules"]
-  // "compileOnSave": false
+  "exclude": ["dist", "node_modules"],
+  "compileOnSave": true
 }
