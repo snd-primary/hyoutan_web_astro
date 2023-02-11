@@ -19,12 +19,27 @@ import { ShopLogo, GlobalMenu } from "@components";
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
   </head>
-  <body class={styles.container}>
-    <header>
+  <body class={styles.Container}>
+    <header class={styles.Header}>
       <ShopLogo />
       <GlobalMenu />
     </header>
     <slot />
-    <footer></footer>
+    <footer class={styles.Footer}>
+      <section class={styles.FooterSection}>
+        <h2>アクセス</h2>
+        <div>
+          <p>串とん亭<br />日本酒酒場三代目ひょうたん</p>
+          <p>鳥取県米子市富士見町2丁目150</p>
+          <p>営業時間・・・17:30~22:00</p>
+        </div>
+        <a href="/">Google Mapsで場所を確認</a>
+        <ul>
+          <li>米子駅より徒歩15分</li>
+          <li>ホテルアジェンダより徒歩5分</li>
+          <li>ホテルアクシスより徒歩5分</li>
+        </ul>
+      </section>
+    </footer>
   </body>
 </html>

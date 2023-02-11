@@ -11,7 +11,7 @@
     "moduleResolution": "node",
     "allowJs": true,
     "outDir": "./dist",
-    "rootDir": "./src",
+    "rootDir": "./",
     "baseUrl": "./",
     "paths": {
       "@": ["src"],
@@ -20,7 +20,7 @@
       "@sitedata": ["src/sitedata/index"]
     },
     "forceConsistentCasingInFileNames": true,
-    "types": ["vite-plugin-svgr/client"],
+    "types": ["vite-plugin-svgr/client", "@astrojs/image/client"],
     "importsNotUsedAsValues": "error"
   },
   "include": ["src/**/*", "types", "gtag.js"],
