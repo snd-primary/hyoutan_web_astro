@@ -11,8 +11,11 @@
     "moduleResolution": "node",
     "allowJs": true,
     "outDir": "./dist",
-    "rootDir": "./",
+    "rootDir": "./src",
     "baseUrl": "./",
+    "paths": {
+      "@": ["./src"]
+    },
     "forceConsistentCasingInFileNames": true,
     "types": ["vite-plugin-svgr/client"],
     "importsNotUsedAsValues": "error"
