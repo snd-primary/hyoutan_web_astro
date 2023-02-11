@@ -1,4 +1,5 @@
 import { globalStyle } from "@vanilla-extract/css";
+import { font } from "./tokens.css";
 /*
  *  Tailwind CSS Preflight
  */
@@ -27,7 +28,8 @@ globalStyle("html", {
   WebkitTextSizeAdjust: "100%" /* 2 */,
   MozTabSize: 4 /* 3 */,
   tabSize: 4 /* 3 */,
-  // fontFamily: font.notoSerifJP /* 4 */,
+  fontFamily: font.lsJP /* 4 */,
+  fontWeight: "400",
   position: "relative",
   fontSize: "16px",
   scrollBehavior: "smooth",
@@ -41,7 +43,6 @@ globalStyle("html", {
 globalStyle("body", {
   margin: 0 /* 1 */,
   lineHeight: "inherit" /* 2 */,
-  // color: themeVars.color.gray03,
   position: "relative",
   "@supports": {
     "-webkit-touch-callout: none": {
@@ -102,7 +103,7 @@ globalStyle("b, strong", {
 */
 
 globalStyle("code, kbd, samp, pre", {
-  // fontFamily: font.notoSerifJP,
+  fontFamily: font.lsJP,
   fontSize: "1em" /* 2 */,
 });
 

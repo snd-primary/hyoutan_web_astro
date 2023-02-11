@@ -7,7 +7,9 @@ import { Image } from "@astrojs/image/components";
 <Layout title="Welcome to Astro.">
   <main class={styles.Main}>
     <section class={styles.MainSection}>
-      <h2>串とんと日本酒の店、ひょうたん</h2>
+      <div class={styles.MainSectionTitle}>
+        <h2>串とんと日本酒の店、ひょうたん</h2>
+      </div>
       <Image
         src="/images/location.jpg"
         alt="ひょうたん外観"
@@ -15,6 +17,7 @@ import { Image } from "@astrojs/image/components";
         quality={70}
         width={992}
         height={484}
+        class={styles.ImageLocation}
       />
       <p>
         男が地蔵峠を通ると、お地蔵様の頭の上に雪が積もっていたので雪を払ってあげた。大晦日の夕方、町についた男はそこでかせ玉を売るが、一向に売れない。と、そこに笠売りのおじいさんがやってきた。笠売りのおじいさんもまったく笠が売れないので、二人はそれぞれの売り物を交換することにして家路についた。

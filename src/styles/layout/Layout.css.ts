@@ -8,24 +8,40 @@ export const styles = {
     backgroundImage: `url(/public/bg_hyoutan.svg)`,
     backgroundRepeat: "repeat",
     backgroundSize: "20%",
+    backgroundAttachment: "fixed",
     display: "grid",
-    gridTemplateColumns: "1fr",
-    gap: spacing.md,
-    padding: spacing.md,
-    overflowY: "hidden",
+    justifyContent: "center",
+    justifyItems: "center",
+    gap: spacing.xxl,
     "@media": {
       [media.lg]: {
-        gridTemplateColumns: "1fr 1.8fr 1fr",
-        backgroundSize: "5%",
+        backgroundSize: "8%",
       },
     },
   }),
   Header: style({
     background: `rgb(${rgb.white})`,
     borderRadius: radius.lg,
+    "@media": {
+      [media.lg]: {
+        position: "fixed",
+        top: "0",
+        left: "0",
+        width: "30%",
+      },
+    },
   }),
   Footer: style({
     overflow: "hidden",
+
+    "@media": {
+      [media.lg]: {
+        position: "fixed",
+        top: "0",
+        right: "0",
+        width: "30%",
+      },
+    },
   }),
   FooterSection: style({
     background: `rgb(${rgb.white})`,
