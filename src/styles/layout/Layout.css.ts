@@ -4,8 +4,6 @@ import { media, radius, rgb, spacing } from "../tokens.css";
 export const styles = {
   Container: style({
     position: "relative",
-    width: "100%",
-    maxWidth: "100%",
     background: `rgb(${rgb.black})`,
     backgroundImage: `url(/public/bg_hyoutan.svg)`,
     backgroundRepeat: "repeat",
@@ -13,10 +11,11 @@ export const styles = {
     display: "grid",
     gridTemplateColumns: "1fr",
     gap: spacing.md,
-    // padding: spacing.md,
+    padding: spacing.md,
+    overflowY: "hidden",
     "@media": {
       [media.lg]: {
-        gridTemplateColumns: "25% 50% 25%",
+        gridTemplateColumns: "1fr 1.8fr 1fr",
         backgroundSize: "5%",
       },
     },
@@ -24,10 +23,8 @@ export const styles = {
   Header: style({
     background: `rgb(${rgb.white})`,
     borderRadius: radius.lg,
-    height: "100vh",
   }),
   Footer: style({
-    height: "100vh",
     overflow: "hidden",
   }),
   FooterSection: style({
