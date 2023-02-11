@@ -52,7 +52,7 @@ export const tokens = createGlobalTheme(":root", {
     tight: "1.25",
     snug: "1.375",
     normal: "1.5",
-    relaxed: "1.75",
+    relaxed: "1.85",
     loose: "4",
   },
   letterSpacing: {

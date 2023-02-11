@@ -1,5 +1,5 @@
 import { globalStyle } from "@vanilla-extract/css";
-import { font } from "./tokens.css";
+import { font, letterSpacing, lineHeight } from "./tokens.css";
 /*
  *  Tailwind CSS Preflight
  */
@@ -24,14 +24,15 @@ globalStyle("*, ::before, ::after", {
 */
 
 globalStyle("html", {
-  lineHeight: 1.5 /* 1 */,
+  lineHeight: lineHeight.relaxed,
   WebkitTextSizeAdjust: "100%" /* 2 */,
   MozTabSize: 4 /* 3 */,
   tabSize: 4 /* 3 */,
   fontFamily: font.lsJP /* 4 */,
+  letterSpacing: letterSpacing.wide,
   fontWeight: "400",
   position: "relative",
-  fontSize: "16px",
+  fontSize: "15px",
   scrollBehavior: "smooth",
 });
 

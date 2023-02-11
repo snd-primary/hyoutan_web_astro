@@ -13,32 +13,43 @@ export const styles = {
     justifyContent: "center",
     justifyItems: "center",
     gap: spacing.xxl,
+    padding: spacing.sm,
     "@media": {
       [media.lg]: {
         backgroundSize: "8%",
       },
     },
   }),
-  Header: style({
-    background: `rgb(${rgb.white})`,
-    borderRadius: radius.lg,
-    "@media": {
-      [media.lg]: {
-        position: "fixed",
-        top: "0",
-        left: "0",
-        width: "30%",
+  Header: style([
+    {
+      background: `rgb(${rgb.white})`,
+      borderRadius: radius.lg,
+      width: "100%",
+      height: "97vh",
+      paddingBottom: spacing.xl,
+      display: "grid",
+      gridTemplateRows: "0.9fr 0.6fr",
+      justifyItems: "center",
+      boxShadow: `0px 0px 20px 10px rgb(${rgb.black},0.45) inset`,
+      "@media": {
+        [media.lg]: {
+          height: "initial",
+          position: "fixed",
+          top: spacing.sm,
+          left: spacing.sm,
+          width: "30%",
+        },
       },
     },
-  }),
+  ]),
   Footer: style({
     overflow: "hidden",
-
+    width: "100%",
     "@media": {
       [media.lg]: {
         position: "fixed",
-        top: "0",
-        right: "0",
+        top: spacing.sm,
+        right: spacing.sm,
         width: "30%",
       },
     },

@@ -6,7 +6,7 @@ export const styles = {
   Main: style({
     display: "grid",
     gridTemplateColumns: "1fr",
-    rowGap: spacing.xxxl,
+    rowGap: spacing.xl,
     "@media": {
       [media.lg]: {
         width: "38%",
@@ -72,4 +72,8 @@ export const styles = {
 globalStyle(`${styles.MainSectionTitle} h2`, {
   display: "inline-block",
   zIndex: zIndex[2],
+});
+globalStyle(`${styles.MainSection} p`, {
+  paddingRight: spacing.md,
+  paddingLeft: spacing.md,
 });
