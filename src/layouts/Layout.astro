@@ -8,6 +8,7 @@ import "../styles/reset.css";
 import "../styles/fontface.css";
 import { styles } from "@styles/layout/Layout.css";
 import { ShopLogo, GlobalMenu } from "@components";
+import classnames from "classnames";
 ---
 
 <!DOCTYPE html>
@@ -27,14 +28,16 @@ import { ShopLogo, GlobalMenu } from "@components";
       </header>
       <slot />
       <footer class={styles.Footer}>
-        <section class={styles.FooterSection}>
+        <section class={classnames(styles.FooterSection, styles.Access)}>
           <h2>アクセス</h2>
+          <p class={styles.AccessShopName}>
+            串とん亭<br />日本酒酒場三代目ひょうたん
+          </p>
           <div>
-            <p>串とん亭<br />日本酒酒場三代目ひょうたん</p>
             <p>鳥取県米子市富士見町2丁目150</p>
             <p>営業時間・・・17:30~22:00</p>
           </div>
-          <a href="/">Google Mapsで場所を確認</a>
+          <a href="/" class={styles.LinkText}>Google Mapsで場所を確認</a>
           <ul>
             <li>米子駅より徒歩15分</li>
             <li>ホテルアジェンダより徒歩5分</li>

@@ -1,5 +1,13 @@
-import { style } from "@vanilla-extract/css";
-import { media, radius, rgb, spacing } from "../tokens.css";
+import { sprinkles } from "@styles/sprinkles.css";
+import { globalStyle, style } from "@vanilla-extract/css";
+import {
+  fontSize,
+  lineHeight,
+  media,
+  radius,
+  rgb,
+  spacing,
+} from "../tokens.css";
 
 export const styles = {
   Container: style({
@@ -37,7 +45,7 @@ export const styles = {
           position: "fixed",
           top: spacing.sm,
           left: spacing.sm,
-          width: "30%",
+          width: "28%",
         },
       },
     },
@@ -50,12 +58,50 @@ export const styles = {
         position: "fixed",
         top: spacing.sm,
         right: spacing.sm,
-        width: "30%",
+        width: "28%",
       },
     },
   }),
-  FooterSection: style({
-    background: `rgb(${rgb.white})`,
-    borderRadius: radius.lg,
+  FooterSection: style([
+    {
+      background: `rgb(${rgb.white})`,
+      borderRadius: radius.lg,
+    },
+    sprinkles({
+      paddingX: "xl",
+      paddingY: "md",
+    }),
+  ]),
+  Access: style({
+    display: "grid",
+    gridTemplateColumns: "1fr",
+    rowGap: spacing.md,
+  }),
+  AccessShopName: style({
+    fontSize: fontSize.xl,
+    fontWeight: "700",
+    lineHeight: lineHeight.relaxed,
+  }),
+  LinkText: style({
+    color: `rgb(${rgb.warmRed})`,
+    textDecoration: "underline",
+    transition: "all .3s ease",
+    selectors: {
+      "&:hover": {
+        color: `rgb(${rgb.blue})`,
+      },
+    },
   }),
 };
+
+globalStyle(`${styles.Access} h2`, {
+  fontSize: fontSize.xxl,
+  fontWeight: "700",
+  borderBottom: `3px solid rgb(${rgb.black})`,
+  lineHeight: lineHeight.snug,
+});
+
+globalStyle(`${styles.Access} ul`, {
+  listStyleType: "disc",
+  paddingLeft: spacing.xxl,
+});

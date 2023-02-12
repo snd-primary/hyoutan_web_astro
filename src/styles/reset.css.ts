@@ -32,7 +32,7 @@ globalStyle("html", {
   letterSpacing: letterSpacing.wide,
   fontWeight: "400",
   position: "relative",
-  fontSize: "15px",
+  fontSize: "14px",
   scrollBehavior: "smooth",
 });
 
