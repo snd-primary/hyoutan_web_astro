@@ -2,6 +2,7 @@
 import Layout from "../layouts/Layout.astro";
 import { styles } from "@styles/pages/index.css";
 import { Image } from "@astrojs/image/components";
+import { Slides } from "@components";
 ---
 
 <Layout title="Welcome to Astro.">
@@ -20,6 +21,9 @@ import { Image } from "@astrojs/image/components";
       <p>
         男が地蔵峠を通ると、お地蔵様の頭の上に雪が積もっていたので雪を払ってあげた。大晦日の夕方、町についた男はそこでかせ玉を売るが、一向に売れない。と、そこに笠売りのおじいさんがやってきた。笠売りのおじいさんもまったく笠が売れないので、二人はそれぞれの売り物を交換することにして家路についた。
       </p>
+      <div class={styles.SlidesWrapper}>
+        <Slides client:load />
+      </div>
     </section>
     <section class={styles.MainSection}>
       <h2>串とんと日本酒の店、ひょうたん</h2>
@@ -51,3 +55,20 @@ import { Image } from "@astrojs/image/components";
     </section>
   </main>
 </Layout>
+<style>
+  .swiper {
+    width: 100%;
+    height: 100%;
+  }
+
+  .swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .swiper-wrapper {
+    transition-timing-function: linear !important;
+  }
+</style>

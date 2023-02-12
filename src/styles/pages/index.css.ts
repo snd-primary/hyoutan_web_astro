@@ -16,7 +16,6 @@ export const styles = {
     display: "grid",
     gridTemplateColumns: "1fr",
     rowGap: spacing.xxl,
-
     "@media": {
       [media.lg]: {
         width: "40%",
@@ -32,6 +31,7 @@ export const styles = {
       placeItems: "center",
       rowGap: spacing.lg,
       containerName: mainContainer,
+      overflow: "hidden",
     },
     sprinkles({
       paddingY: { initial: "md", md: "xl" },
@@ -85,6 +85,11 @@ export const styles = {
       },
     },
   ]),
+  SlidesWrapper: style({
+    width: "100%",
+    margin: "0 auto",
+    overflow: "hidden",
+  }),
 };
 
 globalStyle(`${styles.MainSection} p`, {
