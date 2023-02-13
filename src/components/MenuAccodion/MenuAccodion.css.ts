@@ -85,7 +85,7 @@ globalStyle(`${styles.AccordionContent}[data-state='closed']`, {
 
 globalStyle(`${styles.SakeMenus} p `, {
   fontSize: fontSize.lg,
-  fontWeight: "bold",
+  fontWeight: "700",
 });
 globalStyle(`${styles.SakeMenus} ul `, {
   paddingLeft: spacing.xl,

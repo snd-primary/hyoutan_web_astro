@@ -2,7 +2,7 @@
 import Layout from "../layouts/Layout.astro";
 import { styles } from "@styles/pages/index.css";
 import { Image } from "@astrojs/image/components";
-import { Slides, MainSectionTitle, MenuAccodion } from "@components";
+import { MainSectionTitle, MenuAccodion } from "@components";
 ---
 
 <Layout title="Welcome to Astro.">
@@ -26,11 +26,11 @@ import { Slides, MainSectionTitle, MenuAccodion } from "@components";
       </div>
     </section>
     <section class={styles.MainSection}>
-      <MainSectionTitle text="おしながき" />
+      <MainSectionTitle text="おしながき" bgColor="cream" textColor="black" />
       <MenuAccodion client:load />
     </section>
     <section class={styles.MainSection}>
-      <MainSectionTitle text="串とんと日本酒の店、ひょうたん" />
+      <MainSectionTitle text="店舗情報" bgColor="yellow" textColor="black" />
       <Image
         src="/images/location.jpg"
         alt="ひょうたん外観"
