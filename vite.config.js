@@ -4,6 +4,6 @@ import { vanillaExtractPlugin } from "@vanilla-extract/vite-plugin";
 export default {
   plugins: [vanillaExtractPlugin(), svgr()],
   ssr: {
-    noExternal: ["usehooks-ts"],
+    noExternal: ["usehooks-ts", "@radix-ui/react-accordion"],
   },
 };

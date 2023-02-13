@@ -6,6 +6,7 @@ specifiers:
   '@astrojs/react': ^2.0.2
   '@astrojs/sitemap': ^1.0.1
   '@radix-ui/react-accordion': ^1.1.0
+  '@radix-ui/react-icons': ^1.1.1
   '@types/gtag.js': ^0.0.12
   '@types/react': ^18.0.21
   '@types/react-dom': ^18.0.6
@@ -37,6 +38,7 @@ dependencies:
   '@astrojs/react': 2.0.2_fxtgt6bjwd6p4cwoordejim2zi
   '@astrojs/sitemap': 1.0.1
   '@radix-ui/react-accordion': 1.1.0_biqbaboplfbrettd7655fr4n2y
+  '@radix-ui/react-icons': 1.1.1_react@18.2.0
   '@types/gtag.js': 0.0.12
   '@types/react': 18.0.27
   '@types/react-dom': 18.0.10
@@ -815,6 +817,14 @@ packages:
       react: ^16.8 || ^17.0 || ^18.0
     dependencies:
       '@babel/runtime': 7.20.13
+      react: 18.2.0
+    dev: false
+
+  /@radix-ui/react-icons/1.1.1_react@18.2.0:
+    resolution: {integrity: sha512-xc3wQC59rsFylVbSusQCrrM+6695ppF730Q6yqzhRdqDcRNWIm2R6ngpzBoSOQMcwnq4p805F+Gr7xo4fmtN1A==}
+    peerDependencies:
+      react: ^16.x || ^17.x || ^18.x
+    dependencies:
       react: 18.2.0
     dev: false
 
