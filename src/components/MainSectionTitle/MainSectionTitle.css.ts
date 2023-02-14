@@ -70,7 +70,7 @@ export const ColorRecipe = recipe({
     },
     textColor: {
       black: {
-        color: `rgb(${rgb.black})`,
+        color: `rgb(${rgb.gray})`,
       },
       white: {
         color: `rgb(${rgb.white})`,

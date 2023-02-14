@@ -3,6 +3,7 @@ import Layout from "../layouts/Layout.astro";
 import { styles } from "@styles/pages/index.css";
 import { Image } from "@astrojs/image/components";
 import { MainSectionTitle, MenuAccodion } from "@components";
+import classNames from "classnames";
 ---
 
 <Layout title="Welcome to Astro.">
@@ -27,21 +28,18 @@ import { MainSectionTitle, MenuAccodion } from "@components";
     </section>
     <section class={styles.MainSection}>
       <MainSectionTitle text="おしながき" bgColor="cream" textColor="black" />
-      <MenuAccodion client:load />
+      <MenuAccodion client:idle />
     </section>
-    <section class={styles.MainSection}>
+    <section class={classNames(styles.MainSection, styles.ShopInfo)}>
       <MainSectionTitle text="店舗情報" bgColor="yellow" textColor="black" />
-      <Image
-        src="/images/location.jpg"
-        alt="ひょうたん外観"
-        format="webp"
-        quality={70}
-        width={992}
-        height={484}
-      />
-      <p>
-        男が地蔵峠を通ると、お地蔵様の頭の上に雪が積もっていたので雪を払ってあげた。大晦日の夕方、町についた男はそこでかせ玉を売るが、一向に売れない。と、そこに笠売りのおじいさんがやってきた。笠売りのおじいさんもまったく笠が売れないので、二人はそれぞれの売り物を交換することにして家路についた。
-      </p>
+      <ul>
+        <li><p>席数・・・カウンター◯席、テーブル4席×◯組</p></li>
+        <li><p>18時～22時（ラストオーダー〇〇時）</p></li>
+        <li><p>全席喫煙OK</p></li>
+        <li><p>毎週日曜日＋不定休</p></li>
+        <li><p>お一人様3000円前後</p></li>
+        <li><p>大歓迎。気軽にお越し下さい。</p></li>
+      </ul>
     </section>
   </main>
 </Layout>

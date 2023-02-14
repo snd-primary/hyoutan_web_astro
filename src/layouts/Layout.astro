@@ -9,6 +9,9 @@ import "../styles/fontface.css";
 import { styles } from "@styles/layout/Layout.css";
 import { ShopLogo, GlobalMenu } from "@components";
 import classnames from "classnames";
+import { Image } from "@astrojs/image/components";
+import { InstagramLogoIcon, TwitterLogoIcon } from "@radix-ui/react-icons";
+import { thrdPartyUrl } from "@sitedata";
 ---
 
 <!DOCTYPE html>
@@ -43,6 +46,31 @@ import classnames from "classnames";
             <li>ホテルアジェンダより徒歩5分</li>
             <li>ホテルアクシスより徒歩5分</li>
           </ul>
+        </section>
+        <section class={classnames(styles.FooterSection, styles.Baners)}>
+          <div>
+            <p>LINE登録で<br />お得なクーポンをゲット！</p>
+            <Image
+              src="/images/qrcode.png"
+              alt="ひょうたんLINE友達登録用のQRコード"
+              width={120}
+              height={120}
+            />
+            <p>ご来店の際は上記QRコードから友達登録をお忘れなく！</p>
+          </div>
+          <div>
+            <div>
+              <p>カレー販売やってます。</p>
+            </div>
+            <div class={styles.FooterSnsLogos}>
+              <a href={thrdPartyUrl.twitter}>
+                <TwitterLogoIcon />
+              </a>
+              <a href={thrdPartyUrl.instagram}>
+                <InstagramLogoIcon />
+              </a>
+            </div>
+          </div>
         </section>
       </footer>
     </div>

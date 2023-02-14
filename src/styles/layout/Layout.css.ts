@@ -21,7 +21,7 @@ export const styles = {
     justifyContent: "center",
     justifyItems: "center",
     gap: spacing.xxl,
-    padding: spacing.sm,
+    padding: spacing.md,
     "@media": {
       [media.lg]: {
         backgroundSize: "8%",
@@ -33,18 +33,19 @@ export const styles = {
       background: `rgb(${rgb.white})`,
       borderRadius: radius.lg,
       width: "100%",
-      height: "97vh",
+      height: "94vh",
       paddingBottom: spacing.xl,
       display: "grid",
+      rowGap: spacing.md,
       gridTemplateRows: "0.9fr 0.6fr",
       justifyItems: "center",
-      boxShadow: `0px 0px 20px 10px rgb(${rgb.black},0.45) inset`,
+      boxShadow: `0px 0px 15px 8px rgb(${rgb.black},0.3) inset`,
       "@media": {
         [media.lg]: {
           height: "initial",
           position: "fixed",
-          top: spacing.sm,
-          left: spacing.sm,
+          top: spacing.md,
+          left: spacing.md,
           width: "28%",
         },
       },
@@ -53,11 +54,15 @@ export const styles = {
   Footer: style({
     overflow: "hidden",
     width: "100%",
+    display: "grid",
+    gridAutoColumns: "1fr",
+    gridTemplateRows: "1fr auto",
+    gap: spacing.xxl,
     "@media": {
       [media.lg]: {
         position: "fixed",
-        top: spacing.sm,
-        right: spacing.sm,
+        top: spacing.md,
+        right: spacing.md,
         width: "28%",
       },
     },
@@ -92,6 +97,17 @@ export const styles = {
       },
     },
   }),
+  Baners: style({
+    display: "grid",
+    gridTemplateColumns: "1fr 0.8fr",
+    gap: spacing.sm,
+  }),
+  FooterSnsLogos: style({
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "center",
+    gap: spacing.md,
+  }),
 };
 
 globalStyle(`${styles.Access} h2`, {
@@ -105,3 +121,11 @@ globalStyle(`${styles.Access} ul`, {
   listStyleType: "disc",
   paddingLeft: spacing.xxl,
 });
+globalStyle(`${styles.FooterSnsLogos} svg`, {
+  width: "35px",
+  height: "35px",
+  transition: "all ease 0.3s",
+});
+// globalStyle(`${styles.FooterSnsLogos} svg:hover`, {
+//   stroke: `rgb(${rgb.blue})`,
+// });

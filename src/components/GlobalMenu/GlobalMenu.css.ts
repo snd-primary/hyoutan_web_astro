@@ -17,8 +17,8 @@ export const styles = {
       display: "grid",
       placeItems: "center",
       textAlign: "center",
-      gap: "xl",
-      paddingY: "md",
+      gap: "sm",
+      paddingY: "sm",
     }),
   ]),
 };

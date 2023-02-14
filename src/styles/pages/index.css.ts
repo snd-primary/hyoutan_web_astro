@@ -49,9 +49,10 @@ export const styles = {
     margin: "0 auto",
     overflow: "hidden",
   }),
+  ShopInfo: style({}),
 };
 
 globalStyle(`${styles.MainSection} p`, {
-  paddingRight: spacing.md,
-  paddingLeft: spacing.md,
+  paddingRight: spacing.xl,
+  paddingLeft: spacing.xl,
 });
