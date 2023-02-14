@@ -2,47 +2,56 @@
 import Layout from "../layouts/Layout.astro";
 import { styles } from "@styles/pages/index.css";
 import { Image } from "@astrojs/image/components";
-import { MainSectionTitle, MenuAccodion } from "@components";
+import { MenuAccodion } from "@components";
 import classNames from "classnames";
 ---
 
 <Layout title="Welcome to Astro.">
   <main class={styles.Main}>
-    <section class={styles.MainSection}>
-      <MainSectionTitle text="串とんと日本酒の店、ひょうたん" />
-      <Image
-        src="/images/location.jpg"
-        alt="ひょうたん外観"
-        format="webp"
-        quality={70}
-        width={992}
-        height={484}
-        class={styles.ImageLocation}
-      />
-      <p>
-        男が地蔵峠を通ると、お地蔵様の頭の上に雪が積もっていたので雪を払ってあげた。大晦日の夕方、町についた男はそこでかせ玉を売るが、一向に売れない。と、そこに笠売りのおじいさんがやってきた。笠売りのおじいさんもまったく笠が売れないので、二人はそれぞれの売り物を交換することにして家路についた。
-      </p>
+    <section class={classNames(styles.MainSection, styles.Concept)}>
+      <h2 class={styles.ConceptTitle}>
+        <span>串とんと日本酒の店、</span>三代目ひょうたん
+      </h2>
+      <div class={classNames(styles.MainSectionContent, styles.ConceptContent)}>
+        <Image
+          src="/images/location.jpg"
+          alt="ひょうたん外観"
+          format="webp"
+          quality={70}
+          width={992}
+          height={484}
+          class={styles.ImageLocation}
+        />
+        <p>
+          男が地蔵峠を通ると、お地蔵様の頭の上に雪が積もっていたので雪を払ってあげた。大晦日の夕方、町についた男はそこでかせ玉を売るが、一向に売れない。と、そこに笠売りのおじいさんがやってきた。笠売りのおじいさんもまったく笠が売れないので、二人はそれぞれの売り物を交換することにして家路についた。
+        </p>
+      </div>
       <div class={styles.SlidesWrapper}>
         <!-- <Slides client:load /> -->
       </div>
     </section>
     <section class={styles.MainSection}>
-      <MainSectionTitle text="おしながき" bgColor="cream" textColor="black" />
-      <MenuAccodion client:idle />
+      <h2 class={styles.ConceptTitle}>お品書き<span>※全品税込み価格</span></h2>
+      <div class={styles.MainSectionContent}>
+        <MenuAccodion client:idle />
+      </div>
     </section>
     <section class={classNames(styles.MainSection, styles.ShopInfo)}>
-      <MainSectionTitle text="店舗情報" bgColor="yellow" textColor="black" />
-      <ul>
-        <li><p>席数・・・カウンター◯席、テーブル4席×◯組</p></li>
-        <li><p>18時～22時（ラストオーダー〇〇時）</p></li>
-        <li><p>全席喫煙OK</p></li>
-        <li><p>毎週日曜日＋不定休</p></li>
-        <li><p>お一人様3000円前後</p></li>
-        <li><p>大歓迎。気軽にお越し下さい。</p></li>
-      </ul>
+      <h2 class={styles.ConceptTitle}>店舗概要</h2>
+      <div class={styles.MainSectionContent}>
+        <ul>
+          <li><p>席数・・・カウンター◯席、テーブル4席×◯組</p></li>
+          <li><p>18時～22時（ラストオーダー〇〇時）</p></li>
+          <li><p>全席喫煙OK</p></li>
+          <li><p>毎週日曜日＋不定休</p></li>
+          <li><p>お一人様3000円前後</p></li>
+          <li><p>大歓迎。気軽にお越し下さい。</p></li>
+        </ul>
+      </div>
     </section>
   </main>
 </Layout>
+
 <style>
   .swiper {
     width: 100%;

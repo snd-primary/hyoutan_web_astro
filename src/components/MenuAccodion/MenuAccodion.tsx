@@ -45,21 +45,27 @@ export const MenuAccodion = () => {
       <Accordion.Item className={styles.AccordionItem} value="item-1">
         <AccordionTrigger>日本酒メニュー</AccordionTrigger>
         <AccordionContent>
-          <div className={styles.SakeMenus}>
-            {sake_data.map((i) => (
-              <div key={i.id}>
-                <p>{i.title}</p>
-                <ul>
-                  <li>{i.item1}</li>
-                  {i.item2 ? <li>{i.item2}</li> : null}
-                  {i.item3 ? <li>{i.item3}</li> : null}
-                  {i.item4 ? <li>{i.item4}</li> : null}
-                  {i.item5 ? <li>{i.item5}</li> : null}
-                  {i.item6 ? <li>{i.item6}</li> : null}
-                  {i.item7 ? <li>{i.item7}</li> : null}
-                </ul>
-              </div>
-            ))}
+          <div>
+            <div className={styles.SakeMenus}>
+              {sake_data.map((i) => (
+                <div key={i.id}>
+                  <p>{i.title}</p>
+                  <ul>
+                    <li>{i.item1}</li>
+                    {i.item2 ? <li>{i.item2}</li> : null}
+                    {i.item3 ? <li>{i.item3}</li> : null}
+                    {i.item4 ? <li>{i.item4}</li> : null}
+                    {i.item5 ? <li>{i.item5}</li> : null}
+                    {i.item6 ? <li>{i.item6}</li> : null}
+                    {i.item7 ? <li>{i.item7}</li> : null}
+                  </ul>
+                </div>
+              ))}
+            </div>
+            <div className={styles.SakeMenuAnnotation}>
+              <p>飲酒運転は固くお断りします。</p>
+              <p>1杯につき90ccのご提供となります。</p>
+            </div>
           </div>
         </AccordionContent>
       </Accordion.Item>
@@ -124,7 +130,7 @@ export const MenuAccodion = () => {
               <p className={styles.KushiTonMenusHeaderTitle}>
                 串とん <span>メニュー</span>
               </p>
-              <p>全品税込み385円</p>
+              <p>-全品税込み385円-</p>
             </div>
             <div className={styles.KushiTonList}>
               <span>豚バラ・</span>
@@ -150,7 +156,7 @@ export const MenuAccodion = () => {
       <Accordion.Item className={styles.AccordionItem} value="item-4">
         <AccordionTrigger>一品料理</AccordionTrigger>
         <AccordionContent>
-          <div className={styles.SakeMenus}>
+          <div className={styles.FoodMenu}>
             <ul>
               <li>もつ煮込み・・・660円</li>
               <li>明太じゃがバター・・・605円</li>
@@ -162,6 +168,12 @@ export const MenuAccodion = () => {
               <li>漬物盛り合わせ・・・440円</li>
               <li>おにぎり・・・275円</li>
             </ul>
+            <div className={styles.FoodMenuCopy}>
+              <p>
+                お店の<span>ホワイトボード</span>にて
+              </p>
+              <p>日替わりメニューは</p>
+            </div>
           </div>
         </AccordionContent>
       </Accordion.Item>

@@ -16,10 +16,10 @@ export const tokens = createGlobalTheme(":root", {
     black: "46, 46, 46",
     yellow: "241, 234, 71",
     warmRed: "224, 166, 112",
-    blue: "34, 101, 199",
+    blue: "55, 73, 98",
     gray: "70, 69, 69",
-    cream: "250, 244, 228",
-    red: "163, 30, 30",
+    cream: "245, 222, 179",
+    red: "255, 52, 24",
   },
 
   font: {

@@ -1,6 +1,7 @@
 import { sprinkles } from "@styles/sprinkles.css";
 import {
   fontSize,
+  lineHeight,
   media,
   radius,
   rgb,
@@ -9,10 +10,12 @@ import {
 } from "@styles/tokens.css";
 import { globalStyle, style, createContainer } from "@vanilla-extract/css";
 
-const mainContainer = createContainer();
+export const mainContainer = createContainer();
 
 export const styles = {
   Main: style({
+    containerName: mainContainer,
+    // containerType: "inline-size",
     display: "grid",
     gridTemplateColumns: "1fr",
     rowGap: spacing.xxl,
@@ -29,18 +32,23 @@ export const styles = {
       display: "grid",
       gridTemplateColumns: "1fr",
       placeItems: "center",
-      rowGap: spacing.lg,
-      containerName: mainContainer,
+      rowGap: spacing.xl,
       overflow: "hidden",
     },
     sprinkles({
-      paddingY: { initial: "md", md: "xl" },
-      paddingX: { initial: "md", md: "xxxl" },
+      paddingY: { initial: "xxl", md: "xxl" },
+      paddingX: { initial: "md", md: "xl" },
+    }),
+  ]),
+  MainSectionContent: style([
+    { width: "100%" },
+    sprinkles({
+      paddingX: { initial: "xs", md: "md" },
     }),
   ]),
   ImageLocation: style([
     sprinkles({
-      borderRadius: "lg",
+      borderRadius: "md",
     }),
   ]),
 
@@ -50,9 +58,43 @@ export const styles = {
     overflow: "hidden",
   }),
   ShopInfo: style({}),
+  ConceptTitle: style({
+    textAlign: "left",
+    width: "100%",
+    display: "grid",
+    fontSize: "2.7rem",
+    fontWeight: "700",
+    lineHeight: "1.3",
+    marginBottom: spacing.xs,
+    color: `rgb(${rgb.blue})`,
+    // background: `rgb(${rgb.blue})`,
+    // padding: `${spacing.sm} ${spacing.md}`,
+    // borderRadius: radius.md,
+  }),
+  ConceptContent: style([
+    sprinkles({
+      display: "grid",
+      rowGap: "md",
+      position: "relative",
+    }),
+  ]),
+  Concept: style({
+    backgroundImage: `url(/hyoutan_stroked.svg)`,
+    backgroundRepeat: "no-repeat",
+    backgroundPosition: "155px 22px",
+    backgroundSize: "104%",
+  }),
 };
 
 globalStyle(`${styles.MainSection} p`, {
-  paddingRight: spacing.xl,
-  paddingLeft: spacing.xl,
+  paddingRight: spacing.sm,
+  paddingLeft: spacing.sm,
+});
+globalStyle(`${styles.ConceptTitle} span`, {
+  fontSize: "1.1rem",
+  paddingLeft: "0.21rem",
+});
+globalStyle(`${styles.ShopInfo} ul`, {
+  width: "1",
+  textAlign: "left",
 });
