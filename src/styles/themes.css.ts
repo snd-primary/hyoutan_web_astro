@@ -13,17 +13,19 @@ export const themeVars = createGlobalThemeContract({
     blue: "color-blue",
     gray: "color-gray",
     cream: "color-cream",
+    red: "color-red",
   },
 });
 
 createGlobalTheme(":root", themeVars, {
   color: {
-    white: `rgb${rgb.white}`,
-    black: `rgb${rgb.black}`,
-    yellow: `rgb${rgb.yellow}`,
-    warmRed: `rgb${rgb.warmRed}`,
-    blue: `rgb${rgb.blue}`,
-    gray: `rgb${rgb.gray}`,
-    cream: `rgb${rgb.cream}`,
+    white: `rgb(${rgb.white})`,
+    black: `rgb(${rgb.black})`,
+    yellow: `rgb(${rgb.yellow})`,
+    warmRed: `rgb(${rgb.warmRed})`,
+    blue: `rgb(${rgb.blue})`,
+    gray: `rgb(${rgb.gray})`,
+    cream: `rgb(${rgb.cream})`,
+    red: `rgb(${rgb.red})`,
   },
 });

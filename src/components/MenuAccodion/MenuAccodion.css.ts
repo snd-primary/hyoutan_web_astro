@@ -1,5 +1,12 @@
 import { sprinkles } from "@styles/sprinkles.css";
-import { fontSize, media, rgb, spacing } from "@styles/tokens.css";
+import {
+  font,
+  fontSize,
+  media,
+  radius,
+  rgb,
+  spacing,
+} from "@styles/tokens.css";
 import { globalStyle, keyframes, style } from "@vanilla-extract/css";
 
 const SlideDown = keyframes({
@@ -10,7 +17,6 @@ const SlideDown = keyframes({
     height: `var(--radix-accordion-content-height)`,
   },
 });
-
 const SlideUp = keyframes({
   from: {
     height: `var(--radix-accordion-content-height)`,
@@ -19,31 +25,37 @@ const SlideUp = keyframes({
     height: "0",
   },
 });
-
 export const styles = {
   AccordionHeader: style({
     display: "flex",
   }),
   AccordionTrigger: style([
     {
-      background: "transparent",
-      border: `1px solid rgb(${rgb.black})`,
       height: "45px",
       flex: "1",
       display: "flex",
-      justifyContent: "flex-start",
+      justifyContent: "space-between",
       alignItems: "center",
+      border: `2px dotted rgb(${rgb.black})`,
       columnGap: spacing.sm,
     },
     sprinkles({
-      fontSize: { initial: "lg" },
+      paddingX: "md",
+      paddingY: "sm",
+      fontSize: { initial: "xl" },
+      letterSpacing: "wider",
       fontWeight: "bold",
+      fontFamily: "yujiSyuku",
     }),
   ]),
   AccordionChevron: style({
     transition: `transform 300ms cubic-bezier(0.87, 0, 0.13, 1)`,
+    width: "20px",
+    height: "20px",
   }),
   AccordionContent: style({
+    border: `2px dotted rgb(${rgb.black})`,
+
     overflow: "hidden",
   }),
   AccordionItem: style({
@@ -57,9 +69,11 @@ export const styles = {
   SakeMenus: style([
     {
       display: "grid",
-      gridTemplateColumns: "repeat(2, 1fr)",
+      gridTemplateColumns: "repeat(1, 1fr)",
       "@media": {
-        [media.md]: {},
+        [media.md]: {
+          gridTemplateColumns: "repeat(2, 1fr)",
+        },
       },
     },
     sprinkles({
@@ -68,8 +82,40 @@ export const styles = {
       gap: { initial: "xxl" },
     }),
   ]),
+  KushiTonMenus: style({}),
+  KushiTonMenusHeader: style([
+    {
+      display: "grid",
+      gridTemplateColumns: "1fr",
+      placeItems: "center",
+    },
+    sprinkles({
+      fontFamily: "yujiSyuku",
+      fontSize: "lg",
+      lineHeight: "snug",
+      paddingY: "xl",
+    }),
+  ]),
+  KushiTonMenusHeaderTitle: style([
+    {},
+    sprinkles({
+      fontSize: "xxxl",
+      color: "red",
+      fontWeight: "bold",
+      lineHeight: "snug",
+    }),
+  ]),
+  KushiTonList: style([
+    {
+      border: `2px solid rgb(${rgb.black})`,
+    },
+    sprinkles({
+      marginX: "xl",
+      marginY: "xl",
+      padding: "md",
+    }),
+  ]),
 };
-
 globalStyle(
   `${styles.AccordionTrigger}[data-state='open'] > ${styles.AccordionChevron}`,
   {
@@ -82,11 +128,21 @@ globalStyle(`${styles.AccordionContent}[data-state='open']`, {
 globalStyle(`${styles.AccordionContent}[data-state='closed']`, {
   animation: `${SlideUp} 300ms cubic-bezier(0.87, 0, 0.13, 1)`,
 });
-
 globalStyle(`${styles.SakeMenus} p `, {
   fontSize: fontSize.lg,
   fontWeight: "700",
+  padding: "0",
 });
 globalStyle(`${styles.SakeMenus} ul `, {
-  paddingLeft: spacing.xl,
+  paddingLeft: spacing.xxl,
+  paddingTop: spacing.xs,
+  listStyleType: "disc",
+  display: "grid",
+  gridAutoColumns: "1fr",
+  rowGap: spacing.sm,
+});
+globalStyle(`${styles.KushiTonMenusHeaderTitle} span`, {
+  fontSize: fontSize.xl,
+  whiteSpace: "nowrap",
+  display: "inline-block",
 });
