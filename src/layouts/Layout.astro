@@ -12,6 +12,7 @@ import classnames from "classnames";
 import { Image } from "@astrojs/image/components";
 import { InstagramLogoIcon, TwitterLogoIcon } from "@radix-ui/react-icons";
 import { thrdPartyUrl } from "@sitedata";
+import { sprinkles } from "@styles/sprinkles.css";
 ---
 
 <!DOCTYPE html>
@@ -32,36 +33,99 @@ import { thrdPartyUrl } from "@sitedata";
       <slot />
       <footer class={styles.Footer}>
         <section class={classnames(styles.FooterSection, styles.Access)}>
-          <h2>アクセス</h2>
-          <p class={styles.AccessShopName}>
-            串とん亭<br />日本酒酒場三代目ひょうたん
-          </p>
-          <div>
-            <p>鳥取県米子市富士見町2丁目150</p>
-            <p>営業時間・・・17:30~22:00</p>
+          <h2 class={styles.ConceptTitle}>アクセス</h2>
+          <div
+            class={sprinkles({
+              paddingX: "xs",
+              display: "grid",
+              rowGap: "xs",
+            })}
+          >
+            <p class={styles.AccessShopName}>
+              串とん亭<br />日本酒酒場三代目ひょうたん
+            </p>
+            <div
+              class={sprinkles({
+                fontSize: "sm",
+              })}
+            >
+              <p>鳥取県米子市富士見町2丁目150</p>
+              <p>営業時間・・・17:30~22:00</p>
+            </div>
+            <a href="/" class={styles.LinkText}>Google Mapsで場所を確認</a>
+            <ul
+              class={sprinkles({
+                fontSize: "sm",
+              })}
+            >
+              <li>米子駅より徒歩15分</li>
+              <li>ホテルアジェンダより徒歩5分</li>
+              <li>ホテルアクシスより徒歩5分</li>
+            </ul>
           </div>
-          <a href="/" class={styles.LinkText}>Google Mapsで場所を確認</a>
-          <ul>
-            <li>米子駅より徒歩15分</li>
-            <li>ホテルアジェンダより徒歩5分</li>
-            <li>ホテルアクシスより徒歩5分</li>
-          </ul>
         </section>
         <section class={classnames(styles.FooterSection, styles.Baners)}>
-          <div>
-            <p>LINE登録で<br />お得なクーポンをゲット！</p>
+          <div class={styles.LineCta}>
+            <div
+              class={sprinkles({
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+                gap: "xs",
+              })}
+            >
+              <Image
+                src="/logo/LINE_Brand_icon1.png"
+                alt="ひょうたんLINE友達登録用のQRコード"
+                width={50}
+                height={50}
+              />
+              <p
+                class={sprinkles({
+                  fontWeight: "bold",
+                  lineHeight: "snug",
+                  fontSize: "lg",
+                })}
+              >
+                登録でお得なクーポンをゲット！
+              </p>
+            </div>
             <Image
               src="/images/qrcode.png"
-              alt="ひょうたんLINE友達登録用のQRコード"
-              width={120}
-              height={120}
+              alt="三代目ひょうたんLINE友達登録用のQRコード"
+              width={130}
+              height={130}
+              class={sprinkles({
+                width: "full",
+              })}
             />
-            <p>ご来店の際は上記QRコードから友達登録をお忘れなく！</p>
+            <p
+              class={sprinkles({
+                fontSize: "sm",
+              })}
+            >
+              ご来店の際はQRコードから友達登録をお忘れなく！
+            </p>
           </div>
-          <div>
-            <div>
-              <p>カレー販売やってます。</p>
-            </div>
+          <div
+            class={sprinkles({
+              display: "grid",
+              rowGap: "xl",
+              placeContent: "center",
+            })}
+          >
+            <a
+              href={thrdPartyUrl.base}
+              target="_blank"
+              rel="noopener norefferer"
+            >
+              <Image
+                src="/curry_cta.png"
+                alt="三代目ひょうたんオリジナルカレーの通販サイトへジャンプするリンク画像"
+                width={117}
+                height={312}
+              />
+            </a>
             <div class={styles.FooterSnsLogos}>
               <a href={thrdPartyUrl.twitter}>
                 <TwitterLogoIcon />

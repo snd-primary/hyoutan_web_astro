@@ -18,7 +18,7 @@ export const styles = {
     // containerType: "inline-size",
     display: "grid",
     gridTemplateColumns: "1fr",
-    rowGap: spacing.xxl,
+    rowGap: spacing.xl,
     "@media": {
       [media.lg]: {
         width: "40%",
@@ -62,14 +62,13 @@ export const styles = {
     textAlign: "left",
     width: "100%",
     display: "grid",
-    fontSize: "2.7rem",
+    fontSize: "2.55rem",
     fontWeight: "700",
     lineHeight: "1.3",
     marginBottom: spacing.xs,
     color: `rgb(${rgb.blue})`,
-    // background: `rgb(${rgb.blue})`,
-    // padding: `${spacing.sm} ${spacing.md}`,
-    // borderRadius: radius.md,
+    paddingBottom: spacing.xs,
+    borderBottom: `4px double rgb(${rgb.blue})`,
   }),
   ConceptContent: style([
     sprinkles({

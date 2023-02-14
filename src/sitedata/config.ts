@@ -12,4 +12,5 @@ export const thrdPartyUrl = {
   instagram: "/",
   twitter: "/",
   line: "/",
+  base: "/",
 };

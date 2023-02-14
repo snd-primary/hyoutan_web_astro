@@ -57,9 +57,12 @@ export const styles = {
     display: "grid",
     gridAutoColumns: "1fr",
     gridTemplateRows: "1fr auto",
-    gap: spacing.xxl,
+    gap: spacing.xl,
+    height: "94vh",
+
     "@media": {
       [media.lg]: {
+        height: "initial",
         position: "fixed",
         top: spacing.md,
         right: spacing.md,
@@ -77,15 +80,27 @@ export const styles = {
       paddingY: "md",
     }),
   ]),
+  ConceptTitle: style({
+    textAlign: "left",
+    width: "100%",
+    display: "grid",
+    fontSize: fontSize.xxxl,
+    fontWeight: "700",
+    lineHeight: "1.3",
+    marginBottom: spacing.xs,
+    color: `rgb(${rgb.blue})`,
+    borderBottom: `4px double rgb(${rgb.blue})`,
+  }),
   Access: style({
     display: "grid",
     gridTemplateColumns: "1fr",
-    rowGap: spacing.md,
+    rowGap: spacing.sm,
   }),
   AccessShopName: style({
     fontSize: fontSize.xl,
     fontWeight: "700",
-    lineHeight: lineHeight.relaxed,
+    lineHeight: lineHeight.snug,
+    marginBottom: spacing.sm,
   }),
   LinkText: style({
     color: `rgb(${rgb.warmRed})`,
@@ -99,7 +114,7 @@ export const styles = {
   }),
   Baners: style({
     display: "grid",
-    gridTemplateColumns: "1fr 0.8fr",
+    gridTemplateColumns: "1fr 0.6fr",
     gap: spacing.sm,
   }),
   FooterSnsLogos: style({
@@ -108,14 +123,14 @@ export const styles = {
     justifyContent: "center",
     gap: spacing.md,
   }),
+  LineCta: style({
+    display: "grid",
+    rowGap: spacing.sm,
+    placeItems: "center",
+    borderRight: `2px solid rgb(${rgb.black})`,
+    paddingRight: spacing.sm,
+  }),
 };
-
-globalStyle(`${styles.Access} h2`, {
-  fontSize: fontSize.xxl,
-  fontWeight: "700",
-  borderBottom: `3px solid rgb(${rgb.black})`,
-  lineHeight: lineHeight.snug,
-});
 
 globalStyle(`${styles.Access} ul`, {
   listStyleType: "disc",
@@ -126,6 +141,3 @@ globalStyle(`${styles.FooterSnsLogos} svg`, {
   height: "35px",
   transition: "all ease 0.3s",
 });
-// globalStyle(`${styles.FooterSnsLogos} svg:hover`, {
-//   stroke: `rgb(${rgb.blue})`,
-// });

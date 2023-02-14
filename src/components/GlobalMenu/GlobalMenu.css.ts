@@ -2,7 +2,7 @@ import { sprinkles } from "@styles/sprinkles.css";
 import { radius, rgb, spacing } from "@styles/tokens.css";
 import { globalStyle, style } from "@vanilla-extract/css";
 
-const Border = `6px solid rgb(${rgb.black})`;
+const Border = `6px double rgb(${rgb.black})`;
 
 export const styles = {
   GlobalMenu: style([

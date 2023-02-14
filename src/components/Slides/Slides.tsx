@@ -36,7 +36,12 @@ export const Slides = () => (
       <SwiperSlide key={i.id} className={styles.swiperSlide}>
         <picture>
           <source srcSet={`${i.url}.webp`} />
-          <img src={`${i.url}.jpg`} alt="ひょうたんギャラリーの画像" />
+          <img
+            src={`${i.url}.jpg`}
+            alt="ひょうたんギャラリーの画像"
+            width="200"
+            height="200"
+          />
         </picture>
       </SwiperSlide>
     ))}

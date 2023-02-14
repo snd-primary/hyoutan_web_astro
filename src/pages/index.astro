@@ -2,7 +2,7 @@
 import Layout from "../layouts/Layout.astro";
 import { styles } from "@styles/pages/index.css";
 import { Image } from "@astrojs/image/components";
-import { MenuAccodion } from "@components";
+import { MenuAccodion, Slides } from "@components";
 import classNames from "classnames";
 ---
 
@@ -27,7 +27,7 @@ import classNames from "classnames";
         </p>
       </div>
       <div class={styles.SlidesWrapper}>
-        <!-- <Slides client:load /> -->
+        <Slides client:load />
       </div>
     </section>
     <section class={styles.MainSection}>
