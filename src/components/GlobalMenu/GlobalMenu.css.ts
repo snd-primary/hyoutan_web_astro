@@ -24,12 +24,11 @@ export const styles = {
 };
 
 globalStyle(`${styles.GlobalMenu} a`, {
-  transition: "border-color .4s ease",
+  transition: "color .4s ease",
   borderRadius: radius.sm,
   background: "inherit",
-  border: `3px solid rgba(${rgb.black},0)`,
   padding: `${spacing.xs} ${spacing.md}`,
 });
 globalStyle(`${styles.GlobalMenu} a:hover`, {
-  border: `3px solid rgb(${rgb.black})`,
+  color: `rgb(${rgb.red})`,
 });

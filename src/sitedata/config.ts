@@ -9,10 +9,11 @@ export const url = {
 };
 
 export const thrdPartyUrl = {
-  instagram: "/",
-  twitter: "/",
+  instagram: "https://www.instagram.com/sandaimehyoutan3/",
+  twitter: "https://twitter.com/3Hyoutan",
   line: "/",
   base: "/",
+  googleMap: "https://goo.gl/maps/7qi1qDRCFfqhER7j7",
 };
 
 export const phoneNumber = "123-4567-8910";

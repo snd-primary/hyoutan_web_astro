@@ -55,7 +55,12 @@ import { sprinkles } from "@styles/sprinkles.css";
               <p>鳥取県米子市富士見町2丁目150</p>
               <p>営業時間・・・17:30~22:00</p>
             </div>
-            <a href="/" class={styles.LinkText}>Google Mapsで場所を確認</a>
+            <a
+              href={thrdPartyUrl.googleMap}
+              target="_black"
+              rel="noopener norefferer"
+              class={styles.LinkText}>Google Mapsで場所を確認</a
+            >
             <ul
               class={sprinkles({
                 fontSize: "sm",
@@ -73,32 +78,49 @@ import { sprinkles } from "@styles/sprinkles.css";
               <div
                 class={sprinkles({
                   display: "flex",
-                  alignItems: "center",
-                  justifyContent: "center",
+                  flexDirection: "column",
                   gap: "xs",
                 })}
               >
-                <Image
-                  src="/logo/LINE_Brand_icon1.png"
-                  alt="ひょうたんLINE友達登録用のQRコード"
-                  width={50}
-                  height={50}
-                />
+                <div
+                  class={sprinkles({
+                    fontSize: "xxxl",
+                    fontWeight: "bold",
+                    lineHeight: "tight",
+                  })}
+                  style={{ color: "#2ec62e" }}
+                >
+                  <span
+                    class={sprinkles({
+                      display: "flex",
+                      alignItems: "center",
+                      gap: "sm",
+                    })}
+                  >
+                    LINE<Image
+                      src="/logo/LINE_Brand_icon1.png"
+                      alt="ひょうたんLINE友達登録用のQRコード"
+                      width={32}
+                      height={32}
+                    />
+                  </span>
+                  <span>友達募集中!</span>
+                </div>
+
                 <p
                   class={sprinkles({
-                    fontWeight: "bold",
                     lineHeight: "snug",
-                    fontSize: "lg",
+                    fontSize: "initial",
                   })}
                 >
-                  登録でお得なクーポンをゲット！
+                  LINEでひょうたんの最新情報を発信中！
                 </p>
               </div>
               <Image
-                src="/images/qrcode.png"
+                src="/qrcode.svg"
                 alt="三代目ひょうたんLINE友達登録用のQRコード"
-                width={130}
-                height={130}
+                width={145}
+                height={145}
                 class={sprinkles({
                   width: "initial",
                 })}
@@ -131,10 +153,18 @@ import { sprinkles } from "@styles/sprinkles.css";
                 />
               </a>
               <div class={styles.FooterSnsLogos}>
-                <a href={thrdPartyUrl.twitter}>
+                <a
+                  href={thrdPartyUrl.twitter}
+                  target="_blank"
+                  rel="noopener norefferer"
+                >
                   <TwitterLogoIcon />
                 </a>
-                <a href={thrdPartyUrl.instagram}>
+                <a
+                  href={thrdPartyUrl.instagram}
+                  target="_blank"
+                  rel="noopener norefferer"
+                >
                   <InstagramLogoIcon />
                 </a>
               </div>

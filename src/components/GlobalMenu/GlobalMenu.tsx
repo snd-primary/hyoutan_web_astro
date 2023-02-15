@@ -1,18 +1,13 @@
 import { styles } from "./GlobalMenu.css";
 import { menu } from "@sitedata";
-import classnames from "classnames";
 import { sprinkles } from "@styles/sprinkles.css";
-
-// type Props = {
-//   className: string;
-// };
 
 export const GlobalMenu = () => {
   return (
     <nav
       className={sprinkles({
-        width: "full",
         paddingX: "xxl",
+        display: "grid",
       })}
     >
       <ul className={styles.GlobalMenu}>

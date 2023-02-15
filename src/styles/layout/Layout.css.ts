@@ -33,16 +33,14 @@ export const styles = {
       background: `rgb(${rgb.white})`,
       borderRadius: radius.lg,
       width: "100%",
-      height: "94vh",
+      height: "96vh",
       paddingBottom: spacing.xxl,
       display: "grid",
-      // rowGap: spacing.md,
       gridTemplateRows: "0.9fr 0.6fr",
       justifyItems: "center",
-      boxShadow: `0px 0px 15px 8px rgb(${rgb.black},0.3) inset`,
+      boxShadow: `0px 0px 15px 8px rgb(${rgb.black},0.28) inset`,
       "@media": {
         [media.lg]: {
-          height: "initial",
           position: "fixed",
           top: spacing.md,
           left: spacing.md,
@@ -94,7 +92,7 @@ export const styles = {
   Access: style({
     display: "grid",
     gridTemplateColumns: "1fr",
-    rowGap: spacing.sm,
+    gridTemplateRows: "min-content",
   }),
   AccessShopName: style({
     fontSize: fontSize.xl,

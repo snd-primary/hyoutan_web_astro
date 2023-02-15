@@ -99,7 +99,8 @@ export const styles = {
       fontFamily: "yujiSyuku",
       fontSize: "lg",
       lineHeight: "snug",
-      paddingY: "xl",
+      paddingY: "sm",
+      paddingX: "md",
     }),
   ]),
   KushiTonMenusHeaderTitle: style([
