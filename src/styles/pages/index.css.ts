@@ -1,13 +1,5 @@
 import { sprinkles } from "@styles/sprinkles.css";
-import {
-  fontSize,
-  lineHeight,
-  media,
-  radius,
-  rgb,
-  spacing,
-  zIndex,
-} from "@styles/tokens.css";
+import { media, radius, rgb, spacing } from "@styles/tokens.css";
 import { globalStyle, style, createContainer } from "@vanilla-extract/css";
 
 export const mainContainer = createContainer();
