@@ -83,6 +83,28 @@ export const styles = {
     backgroundPosition: "155px 22px",
     backgroundSize: "104%",
   }),
+  PhoneNumber: style([
+    sprinkles({
+      fontSize: { initial: "xl" },
+      fontWeight: "bold",
+      display: "flex",
+      gap: "sm",
+      letterSpacing: "wider",
+      color: "warmRed",
+    }),
+
+    {
+      alignItems: "center",
+      textDecoration: "underline",
+      transition: "all .3s ease",
+      selectors: {
+        "&:hover": {
+          color: `rgb(${rgb.blue})`,
+        },
+      },
+    },
+  ]),
+  Contact: style({}),
 };
 
 globalStyle(`${styles.MainSection} p`, {
@@ -100,4 +122,12 @@ globalStyle(`${styles.ShopInfo} ul`, {
   paddingLeft: spacing.md,
   display: "grid",
   rowGap: spacing.sm,
+});
+globalStyle(`${styles.PhoneNumber} > svg`, {
+  fill: `rgb(${rgb.cream})`,
+  width: "24px",
+  height: "24px",
+});
+globalStyle(`${styles.Contact} p `, {
+  padding: 0,
 });

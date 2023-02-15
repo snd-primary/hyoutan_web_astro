@@ -6,6 +6,7 @@ import { MenuAccodion, Slides } from "@components";
 import classNames from "classnames";
 import { sprinkles } from "@styles/sprinkles.css";
 import { phoneNumber, url } from "@sitedata";
+import { OpenInNewWindowIcon } from "@radix-ui/react-icons";
 ---
 
 <Layout title="Welcome to Astro.">
@@ -57,13 +58,12 @@ import { phoneNumber, url } from "@sitedata";
     <section class={classNames(styles.MainSection, styles.ShopInfo)}>
       <h2 class={styles.ConceptTitle}>ご予約・お問合せ</h2>
       <div class={styles.MainSectionContent}>
-        <div
-          class={sprinkles({
-            display: "grid",
-            placeItems: "center",
-          })}
-        >
-          <a href={`tel:${phoneNumber}`}>{`${phoneNumber}`}</a>
+        <div class={styles.Contact}>
+          <p>ご予約はお電話にてお願い申し上げます。</p>
+          <a class={styles.PhoneNumber} href={`tel:${phoneNumber}`}
+            >{`${phoneNumber}`}<OpenInNewWindowIcon /></a
+          >
+          <p>お電話受付時間：18時～22時（ラストオーダー〇〇時）</p>
         </div>
       </div>
     </section>
