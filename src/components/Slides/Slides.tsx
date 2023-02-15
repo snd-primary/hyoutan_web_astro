@@ -5,32 +5,24 @@ import "swiper/css/free-mode";
 import "swiper/css/navigation";
 import "swiper/css/thumbs";
 import { Swiper, SwiperSlide } from "swiper/react";
-import SwiperCore, { Autoplay, Navigation, Thumbs } from "swiper";
+import SwiperCore, { Autoplay, Navigation } from "swiper";
 import { slides_data } from "@sitedata";
 import { styles } from "./Slides.css";
 
-SwiperCore.use([Autoplay, Navigation, Thumbs]);
+SwiperCore.use([Autoplay, Navigation]);
 
 export const Slides = () => (
   <Swiper
     autoplay={{
       delay: 0,
-      disableOnInteraction: false,
-      waitForTransition: false,
     }}
     allowTouchMove={false}
     loop={true}
     speed={10000}
     modules={[Autoplay]}
-    slidesPerView={1}
+    slidesPerView={2}
     spaceBetween={16}
     className={styles.swiperContainer}
-    breakpoints={{
-      768: {
-        slidesPerView: 2,
-        speed: 10000,
-      },
-    }}
   >
     {slides_data.map((i) => (
       <SwiperSlide key={i.id} className={styles.swiperSlide}>
