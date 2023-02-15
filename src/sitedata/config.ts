@@ -2,10 +2,10 @@ export const url = {
   root: import.meta.env.PROD
     ? (import.meta.env.PUBLIC_BASEURL as string) ?? ""
     : (import.meta.env.DEVURL as string),
-  menu: "#menu",
-  shop: "#shop",
-  access: "#access",
-  contact: "#contact",
+  menu: "menu",
+  shop: "shop",
+  access: "access",
+  contact: "contact",
 };
 
 export const thrdPartyUrl = {
@@ -14,3 +14,5 @@ export const thrdPartyUrl = {
   line: "/",
   base: "/",
 };
+
+export const phoneNumber = "123-4567-8910";

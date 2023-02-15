@@ -23,13 +23,13 @@ export const styles = {
   ]),
 };
 
-globalStyle(`${styles.GlobalMenu} li`, {
+globalStyle(`${styles.GlobalMenu} a`, {
   transition: "border-color .4s ease",
   borderRadius: radius.sm,
   background: "inherit",
   border: `3px solid rgba(${rgb.black},0)`,
   padding: `${spacing.xs} ${spacing.md}`,
 });
-globalStyle(`${styles.GlobalMenu} li:hover`, {
+globalStyle(`${styles.GlobalMenu} a:hover`, {
   border: `3px solid rgb(${rgb.black})`,
 });

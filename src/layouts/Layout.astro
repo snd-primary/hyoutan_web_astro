@@ -11,7 +11,7 @@ import { ShopLogo, GlobalMenu } from "@components";
 import classnames from "classnames";
 import { Image } from "@astrojs/image/components";
 import { InstagramLogoIcon, TwitterLogoIcon } from "@radix-ui/react-icons";
-import { thrdPartyUrl } from "@sitedata";
+import { thrdPartyUrl, url } from "@sitedata";
 import { sprinkles } from "@styles/sprinkles.css";
 ---
 
@@ -32,7 +32,10 @@ import { sprinkles } from "@styles/sprinkles.css";
       </header>
       <slot />
       <footer class={styles.Footer}>
-        <section class={classnames(styles.FooterSection, styles.Access)}>
+        <section
+          class={classnames(styles.FooterSection, styles.Access)}
+          id={url.access}
+        >
           <h2 class={styles.ConceptTitle}>アクセス</h2>
           <div
             class={sprinkles({

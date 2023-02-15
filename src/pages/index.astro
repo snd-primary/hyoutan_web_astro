@@ -5,6 +5,7 @@ import { Image } from "@astrojs/image/components";
 import { MenuAccodion, Slides } from "@components";
 import classNames from "classnames";
 import { sprinkles } from "@styles/sprinkles.css";
+import { phoneNumber, url } from "@sitedata";
 ---
 
 <Layout title="Welcome to Astro.">
@@ -31,13 +32,16 @@ import { sprinkles } from "@styles/sprinkles.css";
         <Slides client:load />
       </div>
     </section>
-    <section class={styles.MainSection}>
+    <section class={styles.MainSection} id={url.menu}>
       <h2 class={styles.ConceptTitle}>お品書き<span>※全品税込み価格</span></h2>
       <div class={styles.MainSectionContent}>
         <MenuAccodion client:idle />
       </div>
     </section>
-    <section class={classNames(styles.MainSection, styles.ShopInfo)}>
+    <section
+      class={classNames(styles.MainSection, styles.ShopInfo)}
+      id={url.shop}
+    >
       <h2 class={styles.ConceptTitle}>店舗概要</h2>
       <div class={styles.MainSectionContent}>
         <ul>
@@ -48,6 +52,19 @@ import { sprinkles } from "@styles/sprinkles.css";
           <li><p>ご予算：お一人様3000円前後</p></li>
           <li><p>一見さん：大歓迎。気軽にお越し下さい。</p></li>
         </ul>
+      </div>
+    </section>
+    <section class={classNames(styles.MainSection, styles.ShopInfo)}>
+      <h2 class={styles.ConceptTitle}>ご予約・お問合せ</h2>
+      <div class={styles.MainSectionContent}>
+        <div
+          class={sprinkles({
+            display: "grid",
+            placeItems: "center",
+          })}
+        >
+          <a href={`tel:${phoneNumber}`}>{`${phoneNumber}`}</a>
+        </div>
       </div>
     </section>
     <section class={classNames(styles.MainSection, styles.ShopInfo)}>
