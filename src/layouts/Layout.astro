@@ -2,8 +2,7 @@
 export interface Props {
   title: string;
 }
-
-const { title } = Astro.props;
+import Seo from "src/components/Seo/Seo.astro";
 import "../styles/reset.css";
 import "../styles/fontface.css";
 import { styles } from "@styles/layout/Layout.css";
@@ -17,13 +16,7 @@ import { sprinkles } from "@styles/sprinkles.css";
 
 <!DOCTYPE html>
 <html lang="jp">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="generator" content={Astro.generator} />
-    <title>{title}</title>
-  </head>
+  <Seo />
   <body>
     <div class={styles.Container}>
       <header class={styles.Header}>

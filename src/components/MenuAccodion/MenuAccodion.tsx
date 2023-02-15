@@ -5,6 +5,7 @@ import { styles } from "./MenuAccodion.css";
 import { ChevronDownIcon } from "@radix-ui/react-icons";
 import { sake_data } from "@sitedata";
 import { sprinkles } from "@styles/sprinkles.css";
+import { CheckboxIcon } from "@radix-ui/react-icons";
 
 const AccordionTrigger = React.forwardRef<
   HTMLButtonElement,
@@ -45,7 +46,7 @@ export const MenuAccodion = () => {
     >
       <Accordion.Item className={styles.AccordionItem} value="item-1">
         <AccordionTrigger>日本酒メニュー</AccordionTrigger>
-        <AccordionContent>
+        <AccordionContent className={styles.AccordionContent}>
           <div>
             <div className={styles.SakeMenus}>
               {sake_data.map((i) => (
@@ -91,8 +92,14 @@ export const MenuAccodion = () => {
               ))}
             </div>
             <div className={styles.SakeMenuAnnotation}>
-              <p>飲酒運転は固くお断りします。</p>
-              <p>1杯につき90ccのご提供となります。</p>
+              <p>
+                <CheckboxIcon />
+                飲酒運転は固くお断りします。
+              </p>
+              <p>
+                <CheckboxIcon />
+                1杯につき90ccのご提供となります。
+              </p>
             </div>
           </div>
         </AccordionContent>
@@ -100,14 +107,17 @@ export const MenuAccodion = () => {
       <Accordion.Item className={styles.AccordionItem} value="item-2">
         <AccordionTrigger>アルコールメニュー</AccordionTrigger>
         <AccordionContent>
-          <div className={styles.SakeMenus}>
+          <div>
             <div
               className={sprinkles({
                 display: "grid",
                 placeItems: "center",
+                placeContent: "center",
+                fontSize: "lg",
+                padding: "xl",
               })}
             >
-              <p>準備中</p>
+              <p>- 編集中... -</p>
             </div>
           </div>
         </AccordionContent>

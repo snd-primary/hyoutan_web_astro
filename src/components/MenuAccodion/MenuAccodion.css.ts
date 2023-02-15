@@ -58,6 +58,7 @@ export const styles = {
   }),
   AccordionContent: style({
     overflow: "hidden",
+    padding: `${spacing.xs} 0 ${spacing.xxl} 0`,
   }),
   AccordionItem: style({
     display: "grid",
@@ -81,13 +82,40 @@ export const styles = {
     },
     sprinkles({
       paddingX: "xs",
-      paddingY: "sm",
+      paddingY: "xl",
       gap: { initial: "xl", md: "md" },
     }),
   ]),
-  SakeMenuAnnotation: style({
-    display: "grid",
-  }),
+  SakeMenuAnnotation: style([
+    {
+      display: "grid",
+      borderRadius: radius.md,
+      border: `2px solid rgb(${rgb.black})`,
+      position: "relative",
+      maxWidth: "90%",
+      selectors: {
+        "&::before": {
+          content: "おことわり",
+          fontWeight: "bold",
+          position: "absolute",
+          left: "-12px",
+          top: "-25px",
+          fontSize: fontSize.lg,
+          background: `rgb(${rgb.white})`,
+          display: "inline-block",
+          border: `2px solid rgb(${rgb.black})`,
+          padding: `0 ${spacing.sm}`,
+          borderRadius: radius.md,
+        },
+      },
+    },
+    sprinkles({
+      paddingX: "sm",
+      paddingY: "lg",
+      marginTop: "xxxl",
+      marginX: "auto",
+    }),
+  ]),
   KushiTonMenus: style({}),
   KushiTonMenusHeader: style([
     {
@@ -249,5 +277,11 @@ globalStyle(`${styles.FoodMenuCopy} p:nth-child(1) > span`, {
 globalStyle(`${styles.SakeMenuAnnotation} p`, {
   color: `rgb(${rgb.red})`,
   fontWeight: "700",
-  textAlign: "center",
+  display: "flex",
+  alignItems: "center",
+  gap: spacing.xs,
+});
+globalStyle(`${styles.SakeMenuAnnotation} svg`, {
+  width: fontSize.lg,
+  height: fontSize.lg,
 });

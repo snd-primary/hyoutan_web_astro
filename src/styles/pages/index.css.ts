@@ -28,7 +28,8 @@ export const styles = {
       overflow: "hidden",
     },
     sprinkles({
-      paddingY: { initial: "xxl", md: "xxl" },
+      paddingTop: { initial: "xxl", md: "xxl" },
+      paddingBottom: { initial: "xxxxl", md: "xxxxl" },
       paddingX: { initial: "md", md: "xl" },
     }),
   ]),
@@ -65,7 +66,7 @@ export const styles = {
   ConceptContent: style([
     sprinkles({
       display: "grid",
-      rowGap: "md",
+      rowGap: "xl",
       position: "relative",
     }),
   ]),
