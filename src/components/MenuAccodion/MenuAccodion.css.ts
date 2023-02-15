@@ -200,10 +200,13 @@ globalStyle(`${styles.AccordionContent}[data-state='open']`, {
 globalStyle(`${styles.AccordionContent}[data-state='closed']`, {
   animation: `${SlideUp} 300ms cubic-bezier(0.87, 0, 0.13, 1)`,
 });
-globalStyle(`${styles.SakeMenus} p `, {
+globalStyle(`${styles.SakeMenus} ruby `, {
   fontSize: fontSize.lg,
   fontWeight: "700",
   padding: "0",
+});
+globalStyle(`${styles.SakeMenus} rt `, {
+  fontSize: fontSize.smallest,
 });
 globalStyle(`${styles.SakeMenus} > div `, {
   border: `1.5px solid rgb(${rgb.black})`,

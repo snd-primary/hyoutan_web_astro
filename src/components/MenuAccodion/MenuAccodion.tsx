@@ -50,7 +50,34 @@ export const MenuAccodion = () => {
             <div className={styles.SakeMenus}>
               {sake_data.map((i) => (
                 <div key={i.id}>
-                  <p>{i.title}</p>
+                  <div
+                    className={sprinkles({
+                      display: "flex",
+                      alignContent: "baseline",
+                    })}
+                  >
+                    {i.ruby ? (
+                      <ruby>
+                        {i.title} <rp>(</rp>
+                        <rt>{i.ruby}</rt>
+                        <rp>)</rp>
+                      </ruby>
+                    ) : (
+                      <ruby>
+                        {i.title} <rp>(</rp>
+                        <rt>&nbsp;</rt>
+                        <rp>)</rp>
+                      </ruby>
+                    )}
+                    <span
+                      className={sprinkles({
+                        paddingTop: "sm",
+                      })}
+                    >
+                      {i.prfacture}
+                    </span>
+                  </div>
+
                   <ul>
                     <li>{i.item1}</li>
                     {i.item2 ? <li>{i.item2}</li> : null}
