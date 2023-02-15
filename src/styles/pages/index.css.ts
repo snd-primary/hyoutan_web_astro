@@ -96,4 +96,8 @@ globalStyle(`${styles.ConceptTitle} span`, {
 globalStyle(`${styles.ShopInfo} ul`, {
   width: "1",
   textAlign: "left",
+  listStyleType: "circle",
+  paddingLeft: spacing.md,
+  display: "grid",
+  rowGap: spacing.sm,
 });

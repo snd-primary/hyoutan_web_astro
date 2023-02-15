@@ -24,12 +24,12 @@ export const styles = {
 };
 
 globalStyle(`${styles.GlobalMenu} li`, {
-  transition: "all .3s ease",
-  borderRadius: radius.md,
+  transition: "border-color .4s ease",
+  borderRadius: radius.sm,
   background: "inherit",
-  padding: `${spacing.sm} ${spacing.md}`,
+  border: `3px solid rgba(${rgb.black},0)`,
+  padding: `${spacing.xs} ${spacing.md}`,
 });
 globalStyle(`${styles.GlobalMenu} li:hover`, {
-  background: `rgb(${rgb.black})`,
-  color: `rgb(${rgb.white})`,
+  border: `3px solid rgb(${rgb.black})`,
 });

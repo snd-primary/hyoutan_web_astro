@@ -4,6 +4,7 @@ import * as Accordion from "@radix-ui/react-accordion";
 import { styles } from "./MenuAccodion.css";
 import { ChevronDownIcon } from "@radix-ui/react-icons";
 import { sake_data } from "@sitedata";
+import { sprinkles } from "@styles/sprinkles.css";
 
 const AccordionTrigger = React.forwardRef<
   HTMLButtonElement,
@@ -73,50 +74,13 @@ export const MenuAccodion = () => {
         <AccordionTrigger>アルコールメニュー</AccordionTrigger>
         <AccordionContent>
           <div className={styles.SakeMenus}>
-            <div>
-              <p>黒竜（福島）</p>
-              <ul>
-                <li>純米吟醸・・・440円</li>
-                <li>季節酒・・・480円</li>
-                <li>大吟醸・・・850円</li>
-              </ul>
-            </div>
-            <div>
-              <p>黒竜（福島）</p>
-              <ul>
-                <li>純米吟醸・・・440円</li>
-                <li>季節酒・・・480円</li>
-                <li>大吟醸・・・850円</li>
-              </ul>
-            </div>
-            <div>
-              <p>黒竜（福島）</p>
-              <ul>
-                <li>純米吟醸・・・440円</li>
-                <li>季節酒・・・480円</li>
-                <li>大吟醸・・・850円</li>
-              </ul>
-            </div>
-            <div>
-              <p>黒竜（福島）</p>
-              <ul>
-                <li>純米吟醸・・・440円</li>
-                <li>季節酒・・・480円</li>
-                <li>大吟醸・・・850円</li>
-              </ul>
-            </div>
-            <div>
-              <p>黒竜（福島）</p>
-              <ul>
-                <li>純米吟醸・・・440円</li>
-                <li>季節酒・・・480円</li>
-                <li>大吟醸・・・850円</li>
-              </ul>
-            </div>
-            <div>
-              <p>黒竜（福島）</p>
-              <p>黒竜（福島）</p>
-              <p>黒竜（福島）</p>
+            <div
+              className={sprinkles({
+                display: "grid",
+                placeItems: "center",
+              })}
+            >
+              <p>準備中</p>
             </div>
           </div>
         </AccordionContent>

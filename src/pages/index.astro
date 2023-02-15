@@ -4,6 +4,7 @@ import { styles } from "@styles/pages/index.css";
 import { Image } from "@astrojs/image/components";
 import { MenuAccodion, Slides } from "@components";
 import classNames from "classnames";
+import { sprinkles } from "@styles/sprinkles.css";
 ---
 
 <Layout title="Welcome to Astro.">
@@ -40,13 +41,26 @@ import classNames from "classnames";
       <h2 class={styles.ConceptTitle}>店舗概要</h2>
       <div class={styles.MainSectionContent}>
         <ul>
-          <li><p>席数・・・カウンター◯席、テーブル4席×◯組</p></li>
-          <li><p>18時～22時（ラストオーダー〇〇時）</p></li>
-          <li><p>全席喫煙OK</p></li>
-          <li><p>毎週日曜日＋不定休</p></li>
-          <li><p>お一人様3000円前後</p></li>
-          <li><p>大歓迎。気軽にお越し下さい。</p></li>
+          <li><p>席数：カウンター◯席、テーブル4席×◯組</p></li>
+          <li><p>営業時間：18時～22時（ラストオーダー〇〇時）</p></li>
+          <li><p>営業日：毎週日曜日＋不定休</p></li>
+          <li><p>喫煙可否：全席喫煙OK</p></li>
+          <li><p>ご予算：お一人様3000円前後</p></li>
+          <li><p>一見さん：大歓迎。気軽にお越し下さい。</p></li>
         </ul>
+      </div>
+    </section>
+    <section class={classNames(styles.MainSection, styles.ShopInfo)}>
+      <h2 class={styles.ConceptTitle}>Instagram</h2>
+      <div class={styles.MainSectionContent}>
+        <div
+          class={sprinkles({
+            display: "grid",
+            placeItems: "center",
+          })}
+        >
+          <p>準備中</p>
+        </div>
       </div>
     </section>
   </main>

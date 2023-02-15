@@ -64,77 +64,89 @@ import { sprinkles } from "@styles/sprinkles.css";
             </ul>
           </div>
         </section>
-        <section class={classnames(styles.FooterSection, styles.Baners)}>
-          <div class={styles.LineCta}>
-            <div
-              class={sprinkles({
-                display: "flex",
-                alignItems: "center",
-                justifyContent: "center",
-                gap: "xs",
-              })}
-            >
+        <section class={classnames(styles.FooterSection)}>
+          <div class={styles.Baners}>
+            <div class={styles.LineCta}>
+              <div
+                class={sprinkles({
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "center",
+                  gap: "xs",
+                })}
+              >
+                <Image
+                  src="/logo/LINE_Brand_icon1.png"
+                  alt="ひょうたんLINE友達登録用のQRコード"
+                  width={50}
+                  height={50}
+                />
+                <p
+                  class={sprinkles({
+                    fontWeight: "bold",
+                    lineHeight: "snug",
+                    fontSize: "lg",
+                  })}
+                >
+                  登録でお得なクーポンをゲット！
+                </p>
+              </div>
               <Image
-                src="/logo/LINE_Brand_icon1.png"
-                alt="ひょうたんLINE友達登録用のQRコード"
-                width={50}
-                height={50}
+                src="/images/qrcode.png"
+                alt="三代目ひょうたんLINE友達登録用のQRコード"
+                width={130}
+                height={130}
+                class={sprinkles({
+                  width: "initial",
+                })}
               />
               <p
                 class={sprinkles({
-                  fontWeight: "bold",
-                  lineHeight: "snug",
-                  fontSize: "lg",
+                  fontSize: "sm",
                 })}
               >
-                登録でお得なクーポンをゲット！
+                ご来店の際はQRコードから友達登録をお忘れなく！
               </p>
             </div>
-            <Image
-              src="/images/qrcode.png"
-              alt="三代目ひょうたんLINE友達登録用のQRコード"
-              width={130}
-              height={130}
+            <div
               class={sprinkles({
-                width: "full",
-              })}
-            />
-            <p
-              class={sprinkles({
-                fontSize: "sm",
+                display: "grid",
+                rowGap: "xl",
+                placeContent: "center",
               })}
             >
-              ご来店の際はQRコードから友達登録をお忘れなく！
-            </p>
-          </div>
-          <div
-            class={sprinkles({
-              display: "grid",
-              rowGap: "xl",
-              placeContent: "center",
-            })}
-          >
-            <a
-              href={thrdPartyUrl.base}
-              target="_blank"
-              rel="noopener norefferer"
-            >
-              <Image
-                src="/curry_cta.png"
-                alt="三代目ひょうたんオリジナルカレーの通販サイトへジャンプするリンク画像"
-                width={117}
-                height={312}
-              />
-            </a>
-            <div class={styles.FooterSnsLogos}>
-              <a href={thrdPartyUrl.twitter}>
-                <TwitterLogoIcon />
+              <a
+                href={thrdPartyUrl.base}
+                target="_blank"
+                rel="noopener norefferer"
+              >
+                <Image
+                  src="/curry_cta.png"
+                  alt="三代目ひょうたんオリジナルカレーの通販サイトへジャンプするリンク画像"
+                  width={117}
+                  height={312}
+                />
               </a>
-              <a href={thrdPartyUrl.instagram}>
-                <InstagramLogoIcon />
-              </a>
+              <div class={styles.FooterSnsLogos}>
+                <a href={thrdPartyUrl.twitter}>
+                  <TwitterLogoIcon />
+                </a>
+                <a href={thrdPartyUrl.instagram}>
+                  <InstagramLogoIcon />
+                </a>
+              </div>
             </div>
           </div>
+          <p
+            class={sprinkles({
+              textAlign: "center",
+              marginX: "auto",
+              fontSize: "smallest",
+              paddingTop: "sm",
+            })}
+          >
+            sandaime_hyoutan ©2023
+          </p>
         </section>
       </footer>
     </div>
