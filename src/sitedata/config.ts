@@ -19,6 +19,6 @@ export const thrdPartyUrl = {
 export const phoneNumber = "123-4567-8910";
 
 export const siteMeta = {
-  globaltitle: `串とん亭日本酒居酒屋|三代目ひょうたん`,
-  globalDesc: "米子市富士見町にある串とん亭日本酒居酒屋三代目ひょうたん",
+  globaltitle: `串とん亭日本酒酒場|三代目ひょうたん`,
+  globalDesc: "米子市富士見町にある串とん亭日本酒酒場三代目ひょうたん",
 };
