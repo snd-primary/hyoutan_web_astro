@@ -72,16 +72,25 @@ import { sprinkles } from "@styles/sprinkles.css";
                 class={sprinkles({
                   display: "flex",
                   flexDirection: "column",
-                  gap: "xs",
+                  gap: "sm",
                 })}
               >
+                <div class={styles.HorizontalScorllText}>
+                  <div class={styles.hst}>
+                    <p>LINEでひょうたんの最新情報を発信中！</p>
+                  </div>
+                </div>
                 <div
                   class={sprinkles({
                     fontSize: "xxxl",
                     fontWeight: "bold",
                     lineHeight: "tight",
                   })}
-                  style={{ color: "#2ec62e" }}
+                  style={{
+                    color: "#2ec62e",
+                    borderBottom: `4px dotted #2ec62e`,
+                    borderTop: `4px dotted #2ec62e`,
+                  }}
                 >
                   <span
                     class={sprinkles({
@@ -99,21 +108,12 @@ import { sprinkles } from "@styles/sprinkles.css";
                   </span>
                   <span>友達募集中!</span>
                 </div>
-
-                <p
-                  class={sprinkles({
-                    lineHeight: "snug",
-                    fontSize: "initial",
-                  })}
-                >
-                  LINEでひょうたんの最新情報を発信中！
-                </p>
               </div>
               <Image
                 src="/logo/qrcode.png"
                 alt="三代目ひょうたんLINE友達登録用のQRコード"
-                width={145}
-                height={145}
+                width={150}
+                height={150}
                 class={sprinkles({
                   width: "initial",
                 })}
@@ -131,6 +131,7 @@ import { sprinkles } from "@styles/sprinkles.css";
                 display: "grid",
                 rowGap: "xl",
                 placeContent: "center",
+                width: "full",
               })}
             >
               <a
@@ -141,8 +142,8 @@ import { sprinkles } from "@styles/sprinkles.css";
                 <Image
                   src="/curry_cta.png"
                   alt="三代目ひょうたんオリジナルカレーの通販サイトへジャンプするリンク画像"
-                  width={117}
-                  height={312}
+                  width={128}
+                  height={341}
                 />
               </a>
               <div class={styles.FooterSnsLogos}>

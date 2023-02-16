@@ -1,5 +1,5 @@
 import { sprinkles } from "@styles/sprinkles.css";
-import { globalStyle, style } from "@vanilla-extract/css";
+import { globalStyle, keyframes, style } from "@vanilla-extract/css";
 import {
   fontSize,
   lineHeight,
@@ -7,7 +7,17 @@ import {
   radius,
   rgb,
   spacing,
+  zIndex,
 } from "../tokens.css";
+
+const HorizontalScroll = keyframes({
+  "0%": {
+    transform: "rotate(0deg)",
+  },
+  "100%": {
+    transform: "rotate(360deg)",
+  },
+});
 
 export const styles = {
   Container: style({
@@ -127,6 +137,23 @@ export const styles = {
     placeItems: "center",
     borderRight: `2px solid rgb(${rgb.black})`,
     paddingRight: spacing.sm,
+  }),
+  HorizontalScorllText: style({
+    display: "block",
+    height: "30px",
+    width: "100%",
+    background: `rgb(${rgb.black})`,
+    overflow: "hidden",
+    padding: `0 ${spacing.sm}`,
+    borderRadius: radius.sm,
+  }),
+  hst: style({
+    display: "inline-block",
+    color: `rgb(${rgb.white})`,
+    fontSize: fontSize.sm,
+    lineHeight: "30px",
+    // whiteSpace: "nowrap",
+    animation: `${HorizontalScroll} 2s infinite liner`,
   }),
 };
 
