@@ -31,7 +31,7 @@ export const styles = {
     justifyContent: "center",
     justifyItems: "center",
     gap: spacing.xxl,
-    padding: spacing.md,
+    padding: spacing.sm,
     "@media": {
       [media.lg]: {
         backgroundSize: "8%",
@@ -52,9 +52,9 @@ export const styles = {
       "@media": {
         [media.lg]: {
           position: "fixed",
-          top: spacing.md,
-          left: spacing.md,
-          width: "28%",
+          top: spacing.sm,
+          left: spacing.sm,
+          width: "29%",
         },
       },
     },
@@ -65,13 +65,13 @@ export const styles = {
     display: "grid",
     gridAutoColumns: "1fr",
     gridTemplateRows: "1fr auto",
-    gap: spacing.xl,
+    gap: spacing.sm,
     "@media": {
       [media.lg]: {
         position: "fixed",
-        top: spacing.md,
-        right: spacing.md,
-        width: "28%",
+        top: spacing.sm,
+        right: spacing.sm,
+        width: "29%",
       },
     },
   }),

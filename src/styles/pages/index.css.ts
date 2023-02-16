@@ -10,10 +10,10 @@ export const styles = {
     // containerType: "inline-size",
     display: "grid",
     gridTemplateColumns: "1fr",
-    rowGap: spacing.md,
+    rowGap: spacing.sm,
     "@media": {
       [media.lg]: {
-        rowGap: spacing.xl,
+        rowGap: spacing.sm,
         width: "40%",
       },
     },
