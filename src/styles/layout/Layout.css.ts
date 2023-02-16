@@ -66,11 +66,8 @@ export const styles = {
     gridAutoColumns: "1fr",
     gridTemplateRows: "1fr auto",
     gap: spacing.xl,
-    height: "94vh",
-
     "@media": {
       [media.lg]: {
-        height: "initial",
         position: "fixed",
         top: spacing.md,
         right: spacing.md,
@@ -84,7 +81,7 @@ export const styles = {
       borderRadius: radius.lg,
     },
     sprinkles({
-      paddingX: "xl",
+      paddingX: "md",
       paddingY: "md",
     }),
   ]),
