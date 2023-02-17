@@ -84,7 +84,7 @@ export const tokens = createGlobalTheme(":root", {
   radius: {
     sm: "2px",
     md: "6px",
-    lg: "16px",
+    lg: "14px",
     full: "9999px",
   },
   zIndex: {

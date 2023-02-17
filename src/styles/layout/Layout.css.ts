@@ -1,5 +1,5 @@
 import { sprinkles } from "@styles/sprinkles.css";
-import { globalStyle, keyframes, style } from "@vanilla-extract/css";
+import { globalStyle, style } from "@vanilla-extract/css";
 import {
   fontSize,
   lineHeight,
@@ -7,17 +7,7 @@ import {
   radius,
   rgb,
   spacing,
-  zIndex,
 } from "../tokens.css";
-
-const HorizontalScroll = keyframes({
-  "0%": {
-    transform: "rotate(0deg)",
-  },
-  "100%": {
-    transform: "rotate(360deg)",
-  },
-});
 
 export const styles = {
   Container: style({
@@ -30,8 +20,8 @@ export const styles = {
     display: "grid",
     justifyContent: "center",
     justifyItems: "center",
-    gap: spacing.xxl,
-    padding: spacing.sm,
+    gap: spacing.sm,
+    padding: `${spacing.sm} ${spacing.md}`,
     "@media": {
       [media.lg]: {
         backgroundSize: "8%",
@@ -43,11 +33,12 @@ export const styles = {
       background: `rgb(${rgb.white})`,
       borderRadius: radius.lg,
       width: "100%",
-      height: "96vh",
+      height: "fit-content",
       paddingBottom: spacing.xxl,
       display: "grid",
       gridTemplateRows: "0.9fr 0.6fr",
       justifyItems: "center",
+      gap: spacing.xl,
       boxShadow: `0px 0px 15px 8px rgb(${rgb.black},0.28) inset`,
       "@media": {
         [media.lg]: {
@@ -119,38 +110,23 @@ export const styles = {
   }),
   Baners: style({
     display: "grid",
-    gridTemplateColumns: "1fr 0.6fr",
+    gridTemplateColumns: "1fr",
     gap: spacing.sm,
   }),
-  FooterSnsLogos: style({
+  FooterSnsLogos: style([
+    {},
+    sprinkles({
+      display: "flex",
+      flexDirection: { initial: "column" },
+      alignItems: "center",
+      justifyContent: "center",
+      gap: "md",
+    }),
+  ]),
+  Cta: style({
     display: "flex",
-    alignItems: "center",
     justifyContent: "center",
-    gap: spacing.md,
-  }),
-  LineCta: style({
-    display: "grid",
-    rowGap: spacing.sm,
-    placeItems: "center",
-    borderRight: `2px solid rgb(${rgb.black})`,
-    paddingRight: spacing.sm,
-  }),
-  HorizontalScorllText: style({
-    display: "block",
-    height: "30px",
-    width: "100%",
-    background: `rgb(${rgb.black})`,
-    overflow: "hidden",
-    padding: `0 ${spacing.sm}`,
-    borderRadius: radius.sm,
-  }),
-  hst: style({
-    display: "inline-block",
-    color: `rgb(${rgb.white})`,
-    fontSize: fontSize.sm,
-    lineHeight: "30px",
-    // whiteSpace: "nowrap",
-    animation: `${HorizontalScroll} 2s infinite liner`,
+    flexDirection: "row",
   }),
 };
 
@@ -163,3 +139,15 @@ globalStyle(`${styles.FooterSnsLogos} svg`, {
   height: "35px",
   transition: "all ease 0.3s",
 });
+globalStyle(`${styles.FooterSnsLogos} p`, {
+  fontSize: fontSize.smallest,
+  whiteSpace: "nowrap",
+  writingMode: "vertical-lr",
+});
+globalStyle(`${styles.Baners}  a`, {
+  maxWidth: "90%",
+  aspectRatio: "5/3",
+});
+globalStyle(`${styles.Baners}  picture`, {});
+
+//  width={361} height={215}

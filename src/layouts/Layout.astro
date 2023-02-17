@@ -8,7 +8,6 @@ import "../styles/fontface.css";
 import { styles } from "@styles/layout/Layout.css";
 import { ShopLogo, GlobalMenu } from "@components";
 import classnames from "classnames";
-import { Image } from "@astrojs/image/components";
 import { InstagramLogoIcon, TwitterLogoIcon } from "@radix-ui/react-icons";
 import { thrdPartyUrl, url } from "@sitedata";
 import { sprinkles } from "@styles/sprinkles.css";
@@ -66,114 +65,44 @@ import { sprinkles } from "@styles/sprinkles.css";
           </div>
         </section>
         <section class={classnames(styles.FooterSection)}>
-          <div class={styles.Baners}>
-            <div class={styles.LineCta}>
-              <div
-                class={sprinkles({
-                  display: "flex",
-                  flexDirection: "column",
-                  gap: "sm",
-                })}
-              >
-                <!-- <div class={styles.HorizontalScorllText}>
-                  <div class={styles.hst}>
-                    <p>LINEでひょうたんの最新情報を発信中！</p>
-                  </div>
-                </div> -->
-                <div
-                  class={sprinkles({
-                    fontSize: "xxxl",
-                    fontWeight: "bold",
-                    lineHeight: "tight",
-                  })}
-                  style={{
-                    color: "#2ec62e",
-                    borderBottom: `4px dotted #2ec62e`,
-                    borderTop: `4px dotted #2ec62e`,
-                  }}
-                >
-                  <span
-                    class={sprinkles({
-                      display: "flex",
-                      alignItems: "center",
-                      gap: "sm",
-                    })}
-                  >
-                    LINE<Image
-                      src="/logo/LINE_Brand_icon1.png"
-                      alt="ひょうたんLINE友達登録用のQRコード"
-                      width={32}
-                      height={32}
-                    />
-                  </span>
-                  <span>友達募集中!</span>
-                </div>
-              </div>
-              <Image
-                src="/logo/qrcode.png"
-                alt="三代目ひょうたんLINE友達登録用のQRコード"
-                width={150}
-                height={150}
-                class={sprinkles({
-                  width: "initial",
-                })}
-              />
-              <p
-                class={sprinkles({
-                  fontSize: "sm",
-                })}
-              >
-                ご来店の際はQRコードから友達登録をお忘れなく！
-              </p>
+          <div class={styles.Cta}>
+            <div class={styles.Baners}>
+              <a href="#" target="_blank" rel="noopener norefferer">
+                <picture>
+                  <source src="/images/curry_banner.webp" />
+                  <img
+                    src="/images/curry_banner.png"
+                    width={361}
+                    height={215}
+                  />
+                </picture>
+              </a>
+              <a href="#" target="_blank" rel="noopener norefferer">
+                <picture>
+                  <source src="/images/LINEbaner.webp" />
+                  <img src="/images/LINEbaner.png" width={361} height={215} />
+                </picture>
+              </a>
             </div>
-            <div
-              class={sprinkles({
-                display: "grid",
-                rowGap: "xl",
-                placeContent: "center",
-                width: "full",
-              })}
-            >
+            <div class={styles.FooterSnsLogos}>
               <a
-                href={thrdPartyUrl.base}
+                href={thrdPartyUrl.twitter}
                 target="_blank"
                 rel="noopener norefferer"
               >
-                <Image
-                  src="/curry_cta.png"
-                  alt="三代目ひょうたんオリジナルカレーの通販サイトへジャンプするリンク画像"
-                  width={121}
-                  height={324}
-                />
+                <TwitterLogoIcon />
               </a>
-              <div class={styles.FooterSnsLogos}>
-                <a
-                  href={thrdPartyUrl.twitter}
-                  target="_blank"
-                  rel="noopener norefferer"
-                >
-                  <TwitterLogoIcon />
-                </a>
-                <a
-                  href={thrdPartyUrl.instagram}
-                  target="_blank"
-                  rel="noopener norefferer"
-                >
-                  <InstagramLogoIcon />
-                </a>
-              </div>
+              <a
+                href={thrdPartyUrl.instagram}
+                target="_blank"
+                rel="noopener norefferer"
+              >
+                <InstagramLogoIcon />
+              </a>
+
+              <p>sandaime_hyoutan ©2023</p>
             </div>
           </div>
-          <p
-            class={sprinkles({
-              textAlign: "center",
-              marginX: "auto",
-              fontSize: "smallest",
-              paddingTop: "sm",
-            })}
-          >
-            sandaime_hyoutan ©2023
-          </p>
         </section>
       </footer>
     </div>
