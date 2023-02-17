@@ -12,7 +12,14 @@ import { OpenInNewWindowIcon } from "@radix-ui/react-icons";
 <Layout title="Welcome to Astro.">
   <main class={styles.Main}>
     <section class={classNames(styles.MainSection, styles.Concept)}>
-      <h2 class={styles.ConceptTitle}>
+      <h2
+        class={classNames(
+          styles.ConceptTitle,
+          TitleColorRecipe({
+            color: "y",
+          })
+        )}
+      >
         <span>串とんと日本酒の店、</span>三代目ひょうたん
       </h2>
       <div class={classNames(styles.MainSectionContent, styles.ConceptContent)}>
@@ -37,7 +44,16 @@ import { OpenInNewWindowIcon } from "@radix-ui/react-icons";
       </div>
     </section>
     <section class={styles.MainSection} id={url.menu}>
-      <h2 class={styles.ConceptTitle}>お品書き<span>※全品税込み価格</span></h2>
+      <h2
+        class={classNames(
+          styles.ConceptTitle,
+          TitleColorRecipe({
+            color: "y",
+          })
+        )}
+      >
+        お品書き<span>※全品税込み価格</span>
+      </h2>
       <div class={styles.MainSectionContent}>
         <MenuAccodion client:idle />
       </div>
@@ -46,7 +62,16 @@ import { OpenInNewWindowIcon } from "@radix-ui/react-icons";
       class={classNames(styles.MainSection, styles.ShopInfo)}
       id={url.shop}
     >
-      <h2 class={styles.ConceptTitle}>店舗概要</h2>
+      <h2
+        class={classNames(
+          styles.ConceptTitle,
+          TitleColorRecipe({
+            color: "b",
+          })
+        )}
+      >
+        店舗概要
+      </h2>
       <div class={styles.MainSectionContent}>
         <ul>
           <li><p>席数：カウンター◯席、テーブル3組（4~5席）</p></li>
@@ -65,7 +90,7 @@ import { OpenInNewWindowIcon } from "@radix-ui/react-icons";
         class={classNames(
           styles.ConceptTitle,
           TitleColorRecipe({
-            color: "y",
+            color: "b",
           })
         )}
       >
@@ -82,7 +107,16 @@ import { OpenInNewWindowIcon } from "@radix-ui/react-icons";
       </div>
     </section>
     <section class={classNames(styles.MainSection, styles.ShopInfo)}>
-      <h2 class={styles.ConceptTitle}>Instagram</h2>
+      <h2
+        class={classNames(
+          styles.ConceptTitle,
+          TitleColorRecipe({
+            color: "r",
+          })
+        )}
+      >
+        Instagram
+      </h2>
       <div class={styles.MainSectionContent}>
         <div
           class={sprinkles({

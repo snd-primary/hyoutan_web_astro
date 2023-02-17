@@ -72,7 +72,7 @@ export const styles = {
     fontSize: "3.1rem",
     fontFamily: font.MKPOP,
     fontWeight: "700",
-    lineHeight: "1.3",
+    lineHeight: "1",
     marginBottom: spacing.xs,
     letterSpacing: letterSpacing.wider,
   }),
@@ -113,24 +113,24 @@ export const styles = {
   Contact: style({}),
 };
 
-const BC = createVar();
 export const TitleColorRecipe = recipe({
   base: {
-    borderBottom: `8px solid ${BC}`,
+    borderBottomWidth: "8px",
+    borderBottomStyle: "solid",
   },
   variants: {
     color: {
       y: {
-        color: sprinkles({ color: "yellow" }),
-        [BC]: `rgba(${rgb.yellow}, 0.3)`,
+        color: `rgb(${rgb.yellow})`,
+        borderBottomColor: `rgba(${rgb.yellow}, 0.3)`,
       },
       r: {
-        color: sprinkles({ color: "red" }),
-        [BC]: `rgba(${rgb.red}, 0.3)`,
+        color: `rgb(${rgb.red})`,
+        borderBottomColor: `rgba(${rgb.red}, 0.3)`,
       },
       b: {
-        color: sprinkles({ color: "blue" }),
-        [BC]: `rgba(${rgb.blue}, 0.3)`,
+        color: `rgb(${rgb.blue})`,
+        borderBottomColor: `rgba(${rgb.blue}, 0.3)`,
       },
     },
   },
