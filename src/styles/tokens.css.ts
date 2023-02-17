@@ -14,18 +14,19 @@ export const tokens = createGlobalTheme(":root", {
   rgb: {
     white: "250, 250, 250",
     black: "46, 46, 46",
-    yellow: "241, 234, 71",
+    yellow: "199, 185, 36",
     warmRed: "224, 166, 112",
     blue: "55, 73, 98",
     gray: "70, 69, 69",
     cream: "245, 222, 179",
-    red: "255, 52, 24",
+    red: "255, 72, 31",
   },
-
   font: {
     lsJP: 'LINESeedJP, "Hiragino Kaku Gothic ProN","Hiragino Sans",Meiryo,serif',
     yujiSyuku:
       'Yuji_Syuku_subset, "Hiragino Kaku Gothic ProN","Hiragino Sans",Meiryo,serif',
+    MKPOP:
+      'MkPOP_SUBSET, "Hiragino Kaku Gothic ProN","Hiragino Sans",Meiryo,serif',
   },
   fontSize: {
     smallest: "0.694rem",

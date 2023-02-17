@@ -26,7 +26,7 @@ export const styles = {
       background: `rgb(${rgb.white})`,
       boxShadow: `3px 3px 5px rgba(${rgb.black}, 0.4)`,
       borderRadius: "2px",
-      border: `4px solid #FF613E`,
+      border: `4px solid rgb(${rgb.red})`,
       transition: "all 0.2s ease",
       selectors: {
         "&::before": {
@@ -38,7 +38,7 @@ export const styles = {
           transform: "translate(-50%, 0)",
           width: "10px",
           height: "10px",
-          background: `#FF481F`,
+          background: `rgb(${rgb.red})`,
           boxShadow: `1px 1px 1px rgba(${rgb.black}, 0.4), -1px -1px 1px rgba(${rgb.black}, 0.4) inset`,
           borderRadius: radius.full,
         },

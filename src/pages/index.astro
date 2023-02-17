@@ -1,6 +1,6 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import { styles } from "@styles/pages/index.css";
+import { styles, TitleColorRecipe } from "@styles/pages/index.css";
 import { Image } from "@astrojs/image/components";
 import { MenuAccodion, Slides } from "@components";
 import classNames from "classnames";
@@ -61,7 +61,16 @@ import { OpenInNewWindowIcon } from "@radix-ui/react-icons";
       class={classNames(styles.MainSection, styles.ShopInfo)}
       id={url.contact}
     >
-      <h2 class={styles.ConceptTitle}>ご予約・お問合せ</h2>
+      <h2
+        class={classNames(
+          styles.ConceptTitle,
+          TitleColorRecipe({
+            color: "y",
+          })
+        )}
+      >
+        ご予約
+      </h2>
       <div class={styles.MainSectionContent}>
         <div class={styles.Contact}>
           <p>ご予約はお電話にてお願い申し上げます。</p>

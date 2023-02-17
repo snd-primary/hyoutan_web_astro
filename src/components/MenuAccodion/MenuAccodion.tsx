@@ -6,6 +6,11 @@ import { ChevronDownIcon } from "@radix-ui/react-icons";
 import { sake_data } from "@sitedata";
 import { sprinkles } from "@styles/sprinkles.css";
 import { CheckboxIcon } from "@radix-ui/react-icons";
+import { ReactComponent as HIGAWARILOGO } from "./higawari.svg";
+
+const HigawariLogo = () => {
+  return <HIGAWARILOGO />;
+};
 
 const AccordionTrigger = React.forwardRef<
   HTMLButtonElement,
@@ -126,13 +131,10 @@ export const MenuAccodion = () => {
         <AccordionTrigger>串とんメニュー</AccordionTrigger>
         <AccordionContent>
           <div className={styles.KushiTonMenus}>
-            <div className={styles.KushiTonMenusHeader}>
-              <p>三代目ひょうたん名物!!</p>
-              <p className={styles.KushiTonMenusHeaderTitle}>
-                串とん <span>メニュー</span>
-              </p>
-              <p>-全品税込み385円-</p>
-            </div>
+            <picture>
+              <source srcSet="/images/kushiton.webp" />
+              <img src="/images/kushiton.png" alt="串とんメニューの紹介" />
+            </picture>
             <div className={styles.KushiTonList}>
               <span>豚バラ・</span>
               <span>豚タン・</span>
@@ -169,11 +171,8 @@ export const MenuAccodion = () => {
               <li>漬物盛り合わせ・・・440円</li>
               <li>おにぎり・・・275円</li>
             </ul>
-            <div className={styles.FoodMenuCopy}>
-              <p>
-                お店の<span>ホワイトボード</span>にて
-              </p>
-              <p>日替わりメニューは</p>
+            <div className={styles.Higawari}>
+              <HigawariLogo />
             </div>
           </div>
         </AccordionContent>

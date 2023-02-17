@@ -1,6 +1,7 @@
 import { sprinkles } from "@styles/sprinkles.css";
 import { globalStyle, style } from "@vanilla-extract/css";
 import {
+  font,
   fontSize,
   lineHeight,
   media,
@@ -80,12 +81,13 @@ export const styles = {
     textAlign: "left",
     width: "100%",
     display: "grid",
-    fontSize: fontSize.xxxl,
+    fontSize: fontSize.largest,
+    fontFamily: font.MKPOP,
     fontWeight: "700",
     lineHeight: "1.3",
-    marginBottom: spacing.xs,
+    marginBottom: spacing.xl,
     color: `rgb(${rgb.blue})`,
-    borderBottom: `4px double rgb(${rgb.blue})`,
+    borderBottom: `6px solid rgba(${rgb.blue}, 0.5)`,
   }),
   Access: style({
     display: "grid",
@@ -99,12 +101,12 @@ export const styles = {
     marginBottom: spacing.sm,
   }),
   LinkText: style({
-    color: `rgb(${rgb.warmRed})`,
+    color: `rgb(${rgb.blue})`,
     textDecoration: "underline",
     transition: "all .3s ease",
     selectors: {
       "&:hover": {
-        color: `rgb(${rgb.blue})`,
+        color: `rgb(${rgb.red})`,
       },
     },
   }),
@@ -121,6 +123,7 @@ export const styles = {
       alignItems: "center",
       justifyContent: "center",
       gap: "md",
+      color: "yellow",
     }),
   ]),
   Cta: style({

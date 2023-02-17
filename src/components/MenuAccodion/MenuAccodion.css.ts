@@ -1,5 +1,12 @@
 import { sprinkles } from "@styles/sprinkles.css";
-import { fontSize, media, radius, rgb, spacing } from "@styles/tokens.css";
+import {
+  fontSize,
+  media,
+  radius,
+  rgb,
+  spacing,
+  zIndex,
+} from "@styles/tokens.css";
 import { globalStyle, keyframes, style, fontFace } from "@vanilla-extract/css";
 
 const SlideDown = keyframes({
@@ -48,7 +55,6 @@ export const styles = {
       fontSize: { initial: "xl" },
       letterSpacing: "wider",
       fontWeight: "bold",
-      color: "gray",
     }),
   ]),
   AccordionChevron: style({
@@ -116,51 +122,33 @@ export const styles = {
       marginX: "auto",
     }),
   ]),
-  KushiTonMenus: style({}),
-  KushiTonMenusHeader: style([
-    {
-      display: "grid",
-      gridTemplateColumns: "1fr",
-      placeItems: "center",
-    },
+  KushiTonMenus: style([
     sprinkles({
-      fontFamily: "yujiSyuku",
-      fontSize: "lg",
-      lineHeight: "snug",
-      paddingY: "sm",
-      paddingX: "md",
+      marginX: "xs",
+      marginY: "xs",
+      padding: "xs",
+      display: "flex",
+      flexDirection: "column",
+      alignItems: "center",
+      justifyContent: "center",
+      gap: "md",
     }),
   ]),
-  KushiTonMenusHeaderTitle: style([
-    {},
-    sprinkles({
-      fontSize: "largest",
-      color: "red",
-      fontWeight: "bold",
-      lineHeight: "snug",
-    }),
-  ]),
+
   KushiTonList: style([
     {
       border: `2px solid rgb(${rgb.black})`,
       borderRadius: radius.md,
     },
     sprinkles({
-      marginX: "md",
-      marginY: "md",
       padding: "md",
     }),
   ]),
   FoodMenu: style([
     {
       display: "grid",
-      gridTemplateColumns: "1fr",
+      gridTemplateColumns: "1fr auto",
       alignItems: "center",
-      "@media": {
-        [media.md]: {
-          gridTemplateColumns: "1fr 0.4fr",
-        },
-      },
     },
     sprinkles({
       paddingX: "lg",
@@ -209,6 +197,33 @@ export const styles = {
       paddingTop: "xxl",
     }),
   ]),
+  Higawari: style({
+    background: `rgb(${rgb.white})`,
+    boxShadow: `3px 3px 5px rgba(${rgb.black}, 0.4)`,
+    borderRadius: "2px",
+    border: `4px solid #FF613E`,
+    position: "relative",
+    maxWidth: "100px",
+    display: "grid",
+    placeContent: "center",
+    paddingTop: spacing.md,
+    selectors: {
+      "&::after": {
+        content: "",
+        position: "absolute",
+        top: "1%",
+        right: "50%",
+        left: "50%",
+        transform: "translate(-50%, 0)",
+        width: "12px",
+        height: "12px",
+        background: `#FF481F`,
+        boxShadow: `1px 1px 1px rgba(${rgb.black}, 0.4), -1px -1px 1px rgba(${rgb.black}, 0.4) inset`,
+        borderRadius: radius.full,
+        zIndex: zIndex[2],
+      },
+    },
+  }),
 };
 globalStyle(`${styles.AccordionTrigger}:nth-child(3)`, {
   borderBottom: "none",
@@ -220,8 +235,8 @@ globalStyle(
   }
 );
 globalStyle(`${styles.AccordionTrigger}[data-state='open']`, {
-  color: `rgb(${rgb.cream})`,
-  background: `rgb(${rgb.blue})`,
+  color: `rgb(${rgb.white})`,
+  background: `rgb(${rgb.yellow})`,
 });
 globalStyle(`${styles.AccordionContent}[data-state='open']`, {
   animation: `${SlideDown} 300ms cubic-bezier(0.87, 0, 0.13, 1)`,
@@ -251,17 +266,14 @@ globalStyle(`${styles.SakeMenus} ul `, {
   rowGap: spacing.sm,
   fontSize: fontSize.sm,
 });
-globalStyle(`${styles.KushiTonMenusHeaderTitle} span`, {
-  fontSize: fontSize.xl,
-  whiteSpace: "nowrap",
-  display: "inline-block",
-});
+
 globalStyle(`${styles.FoodMenu} ul`, {
   display: "grid",
   rowGap: spacing.sm,
   border: `2px solid rgb(${rgb.black})`,
   borderRadius: radius.md,
   padding: spacing.md,
+  height: "100%",
 });
 globalStyle(`${styles.FoodMenuCopy} p`, {
   paddingRight: "0",
@@ -269,10 +281,6 @@ globalStyle(`${styles.FoodMenuCopy} p`, {
 });
 globalStyle(`${styles.FoodMenuCopy} p:nth-child(1)`, {
   paddingTop: spacing.xxxl,
-});
-globalStyle(`${styles.FoodMenuCopy} p:nth-child(1) > span`, {
-  // textEmphasis: `circle rgb(${rgb.red})`,
-  // WebkitTextEmphasis: `circle rgb(${rgb.red})`,
 });
 globalStyle(`${styles.SakeMenuAnnotation} p`, {
   color: `rgb(${rgb.red})`,
@@ -284,4 +292,7 @@ globalStyle(`${styles.SakeMenuAnnotation} p`, {
 globalStyle(`${styles.SakeMenuAnnotation} svg`, {
   width: fontSize.lg,
   height: fontSize.lg,
+});
+globalStyle(`${styles.KushiTonMenus} picture`, {
+  width: "100%",
 });
