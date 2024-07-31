@@ -14,7 +14,7 @@ export const styles = {
   Container: style({
     position: "relative",
     background: `rgb(${rgb.black})`,
-    backgroundImage: `url(/public/bg_hyoutan.svg)`,
+    backgroundImage: "url(/public/bg_hyoutan.svg)",
     backgroundRepeat: "repeat",
     backgroundSize: "20%",
     backgroundAttachment: "fixed",
@@ -113,13 +113,16 @@ export const styles = {
   Baners: style({
     display: "grid",
     gridTemplateColumns: "1fr",
+    justifyContent: "center",
+    justifyItems: "center",
+    width: "100%",
     gap: spacing.sm,
   }),
   FooterSnsLogos: style([
     {},
     sprinkles({
       display: "flex",
-      flexDirection: { initial: "column" },
+      flexDirection: { initial: "row" },
       alignItems: "center",
       justifyContent: "center",
       gap: "md",
@@ -127,9 +130,11 @@ export const styles = {
     }),
   ]),
   Cta: style({
-    display: "flex",
+    display: "grid",
+    gridTemplateColumns: "1fr",
     justifyContent: "center",
     flexDirection: "row",
+    gap: "8px",
   }),
 };
 
@@ -145,7 +150,6 @@ globalStyle(`${styles.FooterSnsLogos} svg`, {
 globalStyle(`${styles.FooterSnsLogos} p`, {
   fontSize: fontSize.smallest,
   whiteSpace: "nowrap",
-  writingMode: "vertical-lr",
 });
 globalStyle(`${styles.Baners}  a`, {
   maxWidth: "90%",
