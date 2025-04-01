@@ -1,4 +1,4 @@
-import { sprinkles } from "@styles/sprinkles.css";
+import { sprinkles } from "../sprinkles.css";
 import { globalStyle, style } from "@vanilla-extract/css";
 import {
   font,
@@ -14,7 +14,7 @@ export const styles = {
   Container: style({
     position: "relative",
     background: `rgb(${rgb.black})`,
-    backgroundImage: `url(/public/bg_hyoutan.svg)`,
+    backgroundImage: "url(/public/bg_hyoutan.svg)",
     backgroundRepeat: "repeat",
     backgroundSize: "20%",
     backgroundAttachment: "fixed",

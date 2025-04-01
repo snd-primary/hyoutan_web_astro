@@ -1,11 +1,11 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import { styles, TitleColorRecipe } from "@styles/pages/index.css";
+import { styles, TitleColorRecipe } from "../styles/pages/index.css";
 import { Image } from "@astrojs/image/components";
-import { MenuAccodion, Slides } from "@components";
+import { MenuAccodion, Slides } from "../components/index";
 import classNames from "classnames";
-import { sprinkles } from "@styles/sprinkles.css";
-import { phoneNumber, url } from "@sitedata";
+import { sprinkles } from "../styles/sprinkles.css";
+import { phoneNumber, url } from "@/sitedata/index";
 import { OpenInNewWindowIcon } from "@radix-ui/react-icons";
 ---
 
@@ -17,7 +17,7 @@ import { OpenInNewWindowIcon } from "@radix-ui/react-icons";
           styles.ConceptTitle,
           TitleColorRecipe({
             color: "y",
-          })
+          }),
         )}
       >
         <span>串とんと日本酒の店、</span>三代目ひょうたん
@@ -49,7 +49,7 @@ import { OpenInNewWindowIcon } from "@radix-ui/react-icons";
           styles.ConceptTitle,
           TitleColorRecipe({
             color: "y",
-          })
+          }),
         )}
       >
         お品書き<span>※全品税込み価格</span>
@@ -67,7 +67,7 @@ import { OpenInNewWindowIcon } from "@radix-ui/react-icons";
           styles.ConceptTitle,
           TitleColorRecipe({
             color: "b",
-          })
+          }),
         )}
       >
         店舗概要
@@ -91,7 +91,7 @@ import { OpenInNewWindowIcon } from "@radix-ui/react-icons";
           styles.ConceptTitle,
           TitleColorRecipe({
             color: "b",
-          })
+          }),
         )}
       >
         ご予約
@@ -112,7 +112,7 @@ import { OpenInNewWindowIcon } from "@radix-ui/react-icons";
           styles.ConceptTitle,
           TitleColorRecipe({
             color: "r",
-          })
+          }),
         )}
       >
         Instagram

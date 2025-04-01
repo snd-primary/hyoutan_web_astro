@@ -1,9 +1,17 @@
+/* import {
+  defineProperties,
+  createSprinkles,
+  createMapValueFn,
+  createNormalizeValueFn,
+  type ConditionalValue,
+} from "@vanilla-extract/sprinkles"; */
+
 import {
   defineProperties,
   createSprinkles,
   createMapValueFn,
   createNormalizeValueFn,
-  ConditionalValue,
+  type ConditionalValue,
 } from "@vanilla-extract/sprinkles";
 
 import { themeVars } from "./themes.css";
@@ -118,7 +126,7 @@ const unresponsiveProperties = defineProperties({
 
 export const sprinkles = createSprinkles(
   responsiveProperties,
-  unresponsiveProperties
+  unresponsiveProperties,
 );
 
 export type Sprinkles = Parameters<typeof sprinkles>[0];

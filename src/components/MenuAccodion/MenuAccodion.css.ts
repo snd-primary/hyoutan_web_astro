@@ -1,4 +1,4 @@
-import { sprinkles } from "@styles/sprinkles.css";
+import { sprinkles } from "../../styles/sprinkles.css";
 import {
   fontSize,
   media,
@@ -6,7 +6,7 @@ import {
   rgb,
   spacing,
   zIndex,
-} from "@styles/tokens.css";
+} from "../../styles/tokens.css";
 import { globalStyle, keyframes, style, fontFace } from "@vanilla-extract/css";
 
 const SlideDown = keyframes({
@@ -232,7 +232,7 @@ globalStyle(
   `${styles.AccordionTrigger}[data-state='open'] > ${styles.AccordionChevron}`,
   {
     transform: `rotate(180deg)`,
-  }
+  },
 );
 globalStyle(`${styles.AccordionTrigger}[data-state='open']`, {
   color: `rgb(${rgb.white})`,

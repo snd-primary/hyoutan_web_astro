@@ -1,5 +1,5 @@
-import { ReactComponent as SvgLogo } from "./icon-instagram.svg";
+import { InstagramLogoIcon } from "@radix-ui/react-icons";
 
 export const InstagramLogo = () => {
-  return <SvgLogo />;
+  return <InstagramLogoIcon />;
 };

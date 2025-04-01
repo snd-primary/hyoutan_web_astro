@@ -1,5 +1,5 @@
-import { sprinkles } from "@styles/sprinkles.css";
-import { recipe, RecipeVariants } from "@vanilla-extract/recipes";
+import { sprinkles } from "../sprinkles.css";
+import { recipe, type RecipeVariants } from "@vanilla-extract/recipes";
 import {
   font,
   letterSpacing,
@@ -7,7 +7,7 @@ import {
   radius,
   rgb,
   spacing,
-} from "@styles/tokens.css";
+} from "../tokens.css";
 import {
   globalStyle,
   style,
@@ -84,7 +84,7 @@ export const styles = {
     }),
   ]),
   Concept: style({
-    backgroundImage: `url(/hyoutan_stroked.svg)`,
+    backgroundImage: "url(/hyoutan_stroked.svg)",
     backgroundRepeat: "no-repeat",
     backgroundPosition: "155px 22px",
     backgroundSize: "104%",

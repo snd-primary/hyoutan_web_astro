@@ -5,11 +5,10 @@ import "swiper/css/free-mode";
 import "swiper/css/navigation";
 import "swiper/css/thumbs";
 import { Swiper, SwiperSlide } from "swiper/react";
-import SwiperCore, { Autoplay, Navigation } from "swiper";
-import { slides_data } from "@sitedata";
-import { styles } from "./Slides.css";
+import { Navigation, Autoplay } from "swiper/modules";
 
-SwiperCore.use([Autoplay, Navigation]);
+import { slides_data } from "@/sitedata/index";
+import { styles } from "./Slides.css";
 
 export const Slides = () => (
   <Swiper
@@ -19,7 +18,7 @@ export const Slides = () => (
     allowTouchMove={false}
     loop={true}
     speed={10000}
-    modules={[Autoplay]}
+    modules={[Navigation, Autoplay]}
     slidesPerView={2}
     spaceBetween={16}
     className={styles.swiperContainer}

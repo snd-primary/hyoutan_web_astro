@@ -3,8 +3,8 @@ import React from "react";
 import * as Accordion from "@radix-ui/react-accordion";
 import { styles } from "./MenuAccodion.css";
 import { ChevronDownIcon } from "@radix-ui/react-icons";
-import { sake_data } from "@sitedata";
-import { sprinkles } from "@styles/sprinkles.css";
+import { sake_data } from "@/sitedata/index";
+import { sprinkles } from "../../styles/sprinkles.css";
 import { CheckboxIcon } from "@radix-ui/react-icons";
 import { ReactComponent as HIGAWARILOGO } from "./higawari.svg";
 

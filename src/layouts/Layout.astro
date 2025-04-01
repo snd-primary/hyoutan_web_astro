@@ -2,25 +2,28 @@
 export interface Props {
   title: string;
 }
+import { Image } from "astro:assets";
+import hyoutankv from "../assets/h_kv.png";
 import Seo from "src/components/Seo/Seo.astro";
 import "../styles/reset.css";
 import "../styles/fontface.css";
-import { styles } from "@styles/layout/Layout.css";
-import { ShopLogo, GlobalMenu } from "@components";
+import { styles } from "../styles/layout/Layout.css";
+import { ShopLogo, GlobalMenu } from "../components/index";
 import classnames from "classnames";
 import { InstagramLogoIcon, TwitterLogoIcon } from "@radix-ui/react-icons";
-import { thrdPartyUrl, url } from "@sitedata";
-import { sprinkles } from "@styles/sprinkles.css";
+import { thrdPartyUrl, url } from "@/sitedata/index";
+import { sprinkles } from "../styles/sprinkles.css";
 ---
 
-<!DOCTYPE html>
+<!doctype html>
 <html lang="jp">
   <Seo />
   <body>
     <div class={styles.Container}>
       <header class={styles.Header}>
-        <ShopLogo />
-        <GlobalMenu />
+        <!-- <ShopLogo /> -->
+        <img src={"/images/h_kv.png"} alt="hyoutan" />
+        <!-- <GlobalMenu /> -->
       </header>
       <slot />
       <footer class={styles.Footer}>
