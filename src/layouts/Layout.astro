@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ---
 export interface Props {
   title: string;
@@ -111,3 +112,105 @@ import { sprinkles } from "../styles/sprinkles.css";
     </div>
   </body>
 </html>
+=======
+---
+export interface Props {
+  title: string;
+}
+import Seo from "src/components/Seo/Seo.astro";
+import "../styles/reset.css";
+import "../styles/fontface.css";
+import { styles } from "@styles/layout/Layout.css";
+import { ShopLogo, GlobalMenu } from "@components";
+import classnames from "classnames";
+import { InstagramLogoIcon, TwitterLogoIcon } from "@radix-ui/react-icons";
+import { thrdPartyUrl, url } from "@sitedata";
+import { sprinkles } from "@styles/sprinkles.css";
+---
+
+<!DOCTYPE html>
+<html lang="jp">
+  <Seo />
+  <body>
+    <div class={styles.Container}>
+      <header class={styles.Header}>
+        <ShopLogo />
+        <GlobalMenu />
+      </header>
+      <slot />
+      <footer class={styles.Footer}>
+        <section
+          class={classnames(styles.FooterSection, styles.Access)}
+          id={url.access}
+        >
+          <h2 class={styles.ConceptTitle}>アクセス</h2>
+          <div
+            class={sprinkles({
+              paddingX: "xs",
+              display: "grid",
+              rowGap: "xs",
+            })}
+          >
+            <p class={styles.AccessShopName}>
+              串とん亭<br />日本酒酒場三代目ひょうたん
+            </p>
+            <div
+              class={sprinkles({
+                fontSize: "sm",
+              })}
+            >
+              <p>鳥取県米子市富士見町2丁目150</p>
+              <p>営業時間・・・17:30~22:00</p>
+            </div>
+            <a
+              href={thrdPartyUrl.googleMap}
+              target="_black"
+              rel="noopener norefferer"
+              class={styles.LinkText}>Google Mapsで場所を確認</a
+            >
+            <ul
+              class={sprinkles({
+                fontSize: "sm",
+              })}
+            >
+              <li>米子駅より徒歩15分</li>
+              <li>ホテルアジェンダより徒歩5分</li>
+              <li>ホテルアクシスより徒歩5分</li>
+            </ul>
+          </div>
+        </section>
+        <section class={classnames(styles.FooterSection)}>
+          <div class={styles.Cta}>
+            <div class={styles.Baners}>
+              <a href="" target="_blank" rel="noopener norefferer">
+                <picture>
+                  <source src="/images/LINEbaner.webp" />
+                  <img src="/images/LINEbaner.png" width={361} height={215} />
+                </picture>
+              </a>
+            </div>
+            <div class={styles.FooterSnsLogos}>
+              <a
+                href={thrdPartyUrl.twitter}
+                target="_blank"
+                rel="noopener norefferer"
+              >
+                <TwitterLogoIcon />
+              </a>
+              <a
+                href={thrdPartyUrl.instagram}
+                target="_blank"
+                rel="noopener norefferer"
+              >
+                <InstagramLogoIcon />
+              </a>
+
+              <p>sandaime_hyoutan ©2024</p>
+            </div>
+          </div>
+        </section>
+      </footer>
+    </div>
+  </body>
+</html>
+>>>>>>> 643a572a7fab90a3dc1a408cb944627472d080c2
